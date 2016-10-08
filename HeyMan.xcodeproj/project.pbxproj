@@ -7,34 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1144BF431DA8913900876030 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF401DA8913900876030 /* AVFoundation.framework */; };
+		1144BF441DA8913900876030 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF411DA8913900876030 /* CoreMedia.framework */; };
+		1144BF451DA8913900876030 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF421DA8913900876030 /* GLKit.framework */; };
+		1144BF471DA894C700876030 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF461DA894C700876030 /* UIKit.framework */; };
 		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
 		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
-		11FE74681DA88E3600AA342C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.m */; };
+		11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.mm */; };
 		11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FE745C1DA88E3600AA342C /* Assets.xcassets */; };
 		11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE745E1DA88E3600AA342C /* LaunchScreen.storyboard */; };
 		11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74601DA88E3600AA342C /* Main.storyboard */; };
 		11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74621DA88E3600AA342C /* HeyMan.xcdatamodeld */; };
 		11FE746D1DA88E3600AA342C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74641DA88E3600AA342C /* Info.plist */; };
-		11FE746E1DA88E3600AA342C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74651DA88E3600AA342C /* main.m */; };
-		11FE746F1DA88E3600AA342C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74671DA88E3600AA342C /* ViewController.m */; };
+		11FE746E1DA88E3600AA342C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74651DA88E3600AA342C /* main.mm */; };
+		11FE746F1DA88E3600AA342C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74671DA88E3600AA342C /* ViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1144BF401DA8913900876030 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1144BF411DA8913900876030 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1144BF421DA8913900876030 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		1144BF461DA894C700876030 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		11FE74571DA88DAF00AA342C /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		11FE74581DA88DAF00AA342C /* Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graphics.h; sourceTree = "<group>"; };
 		11FE745A1DA88E3600AA342C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		11FE745B1DA88E3600AA342C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11FE745B1DA88E3600AA342C /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		11FE745C1DA88E3600AA342C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11FE745F1DA88E3600AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11FE74611DA88E3600AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		11FE74631DA88E3600AA342C /* HeyMan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeyMan.xcdatamodel; sourceTree = "<group>"; };
 		11FE74641DA88E3600AA342C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11FE74651DA88E3600AA342C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11FE74651DA88E3600AA342C /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		11FE74661DA88E3600AA342C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		11FE74671DA88E3600AA342C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		11FE74671DA88E3600AA342C /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,15 +50,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1144BF471DA894C700876030 /* UIKit.framework in Frameworks */,
+				1144BF431DA8913900876030 /* AVFoundation.framework in Frameworks */,
+				1144BF441DA8913900876030 /* CoreMedia.framework in Frameworks */,
+				1144BF451DA8913900876030 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1144BF3F1DA890F800876030 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1144BF461DA894C700876030 /* UIKit.framework */,
+				1144BF401DA8913900876030 /* AVFoundation.framework */,
+				1144BF411DA8913900876030 /* CoreMedia.framework */,
+				1144BF421DA8913900876030 /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11FE74151DA8899300AA342C = {
 			isa = PBXGroup;
 			children = (
+				1144BF3F1DA890F800876030 /* Frameworks */,
 				11FE74201DA8899300AA342C /* HeyMan */,
 				11FE741F1DA8899300AA342C /* Products */,
 			);
@@ -68,9 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				11FE74561DA88DA000AA342C /* Graphics */,
+				11FE743B1DA88A3B00AA342C /* Platform */,
 				11FE74531DA88D9C00AA342C /* Application.cpp */,
 				11FE74541DA88D9C00AA342C /* Application.h */,
-				11FE743B1DA88A3B00AA342C /* Platform */,
 			);
 			path = HeyMan;
 			sourceTree = "<group>";
@@ -86,15 +110,15 @@
 		11FE743C1DA88A4300AA342C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				11FE745A1DA88E3600AA342C /* AppDelegate.h */,
-				11FE745B1DA88E3600AA342C /* AppDelegate.m */,
-				11FE745C1DA88E3600AA342C /* Assets.xcassets */,
 				11FE745D1DA88E3600AA342C /* Base.lproj */,
+				11FE745A1DA88E3600AA342C /* AppDelegate.h */,
+				11FE745B1DA88E3600AA342C /* AppDelegate.mm */,
+				11FE745C1DA88E3600AA342C /* Assets.xcassets */,
 				11FE74621DA88E3600AA342C /* HeyMan.xcdatamodeld */,
 				11FE74641DA88E3600AA342C /* Info.plist */,
-				11FE74651DA88E3600AA342C /* main.m */,
+				11FE74651DA88E3600AA342C /* main.mm */,
 				11FE74661DA88E3600AA342C /* ViewController.h */,
-				11FE74671DA88E3600AA342C /* ViewController.m */,
+				11FE74671DA88E3600AA342C /* ViewController.mm */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -188,12 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FE746F1DA88E3600AA342C /* ViewController.m in Sources */,
-				11FE746E1DA88E3600AA342C /* main.m in Sources */,
+				11FE746F1DA88E3600AA342C /* ViewController.mm in Sources */,
+				11FE746E1DA88E3600AA342C /* main.mm in Sources */,
 				11FE74551DA88D9C00AA342C /* Application.cpp in Sources */,
 				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
 				11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */,
-				11FE74681DA88E3600AA342C /* AppDelegate.m in Sources */,
+				11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
