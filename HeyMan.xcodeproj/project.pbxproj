@@ -13,6 +13,7 @@
 		1144BF471DA894C700876030 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF461DA894C700876030 /* UIKit.framework */; };
 		1144BF4A1DA8955500876030 /* RenderLayerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1144BF491DA8955500876030 /* RenderLayerViewController.mm */; };
 		1144BF4C1DA898E800876030 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF4B1DA898E800876030 /* OpenGLES.framework */; };
+		1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */; };
 		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
 		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
 		11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.mm */; };
@@ -20,7 +21,6 @@
 		11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE745E1DA88E3600AA342C /* LaunchScreen.storyboard */; };
 		11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74601DA88E3600AA342C /* Main.storyboard */; };
 		11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74621DA88E3600AA342C /* HeyMan.xcdatamodeld */; };
-		11FE746D1DA88E3600AA342C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74641DA88E3600AA342C /* Info.plist */; };
 		11FE746E1DA88E3600AA342C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74651DA88E3600AA342C /* main.mm */; };
 		11FE746F1DA88E3600AA342C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74671DA88E3600AA342C /* ViewController.mm */; };
 /* End PBXBuildFile section */
@@ -33,6 +33,8 @@
 		1144BF481DA8955500876030 /* RenderLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderLayerViewController.h; sourceTree = "<group>"; };
 		1144BF491DA8955500876030 /* RenderLayerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderLayerViewController.mm; sourceTree = "<group>"; };
 		1144BF4B1DA898E800876030 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1144BF4D1DA8C56500876030 /* OpenGLESGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLESGraphics.h; sourceTree = "<group>"; };
+		1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLESGraphics.mm; sourceTree = "<group>"; };
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -128,6 +130,8 @@
 				11FE74671DA88E3600AA342C /* ViewController.mm */,
 				1144BF481DA8955500876030 /* RenderLayerViewController.h */,
 				1144BF491DA8955500876030 /* RenderLayerViewController.mm */,
+				1144BF4D1DA8C56500876030 /* OpenGLESGraphics.h */,
+				1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -207,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FE746D1DA88E3600AA342C /* Info.plist in Resources */,
 				11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */,
 				11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */,
 				11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */,
@@ -226,6 +229,7 @@
 				11FE74551DA88D9C00AA342C /* Application.cpp in Sources */,
 				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
 				11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */,
+				1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */,
 				1144BF4A1DA8955500876030 /* RenderLayerViewController.mm in Sources */,
 				11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */,
 			);
