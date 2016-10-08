@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11FE744B1DA88A6800AA342C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE743E1DA88A6800AA342C /* AppDelegate.m */; };
-		11FE744C1DA88A6800AA342C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FE743F1DA88A6800AA342C /* Assets.xcassets */; };
-		11FE744D1DA88A6800AA342C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74411DA88A6800AA342C /* LaunchScreen.storyboard */; };
-		11FE744E1DA88A6800AA342C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74431DA88A6800AA342C /* Main.storyboard */; };
-		11FE744F1DA88A6800AA342C /* HeyMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74451DA88A6800AA342C /* HeyMan.xcdatamodeld */; };
-		11FE74501DA88A6800AA342C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74471DA88A6800AA342C /* Info.plist */; };
-		11FE74511DA88A6800AA342C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74481DA88A6800AA342C /* main.m */; };
-		11FE74521DA88A6800AA342C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE744A1DA88A6800AA342C /* ViewController.m */; };
+		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
+		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
+		11FE74681DA88E3600AA342C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.m */; };
+		11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FE745C1DA88E3600AA342C /* Assets.xcassets */; };
+		11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE745E1DA88E3600AA342C /* LaunchScreen.storyboard */; };
+		11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74601DA88E3600AA342C /* Main.storyboard */; };
+		11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74621DA88E3600AA342C /* HeyMan.xcdatamodeld */; };
+		11FE746D1DA88E3600AA342C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74641DA88E3600AA342C /* Info.plist */; };
+		11FE746E1DA88E3600AA342C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74651DA88E3600AA342C /* main.m */; };
+		11FE746F1DA88E3600AA342C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74671DA88E3600AA342C /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11FE743D1DA88A6800AA342C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Platform/iOS/AppDelegate.h; sourceTree = "<group>"; };
-		11FE743E1DA88A6800AA342C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Platform/iOS/AppDelegate.m; sourceTree = "<group>"; };
-		11FE743F1DA88A6800AA342C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Platform/iOS/Assets.xcassets; sourceTree = "<group>"; };
-		11FE74421DA88A6800AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		11FE74441DA88A6800AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		11FE74461DA88A6800AA342C /* HeyMan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeyMan.xcdatamodel; sourceTree = "<group>"; };
-		11FE74471DA88A6800AA342C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platform/iOS/Info.plist; sourceTree = "<group>"; };
-		11FE74481DA88A6800AA342C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Platform/iOS/main.m; sourceTree = "<group>"; };
-		11FE74491DA88A6800AA342C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Platform/iOS/ViewController.h; sourceTree = "<group>"; };
-		11FE744A1DA88A6800AA342C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Platform/iOS/ViewController.m; sourceTree = "<group>"; };
+		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		11FE74571DA88DAF00AA342C /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
+		11FE74581DA88DAF00AA342C /* Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graphics.h; sourceTree = "<group>"; };
+		11FE745A1DA88E3600AA342C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11FE745B1DA88E3600AA342C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11FE745C1DA88E3600AA342C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11FE745F1DA88E3600AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11FE74611DA88E3600AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		11FE74631DA88E3600AA342C /* HeyMan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeyMan.xcdatamodel; sourceTree = "<group>"; };
+		11FE74641DA88E3600AA342C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FE74651DA88E3600AA342C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11FE74661DA88E3600AA342C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		11FE74671DA88E3600AA342C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 		11FE74201DA8899300AA342C /* HeyMan */ = {
 			isa = PBXGroup;
 			children = (
+				11FE74561DA88DA000AA342C /* Graphics */,
+				11FE74531DA88D9C00AA342C /* Application.cpp */,
+				11FE74541DA88D9C00AA342C /* Application.h */,
 				11FE743B1DA88A3B00AA342C /* Platform */,
 			);
 			path = HeyMan;
@@ -71,33 +80,41 @@
 			children = (
 				11FE743C1DA88A4300AA342C /* iOS */,
 			);
-			name = Platform;
+			path = Platform;
 			sourceTree = "<group>";
 		};
 		11FE743C1DA88A4300AA342C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				11FE743D1DA88A6800AA342C /* AppDelegate.h */,
-				11FE743E1DA88A6800AA342C /* AppDelegate.m */,
-				11FE743F1DA88A6800AA342C /* Assets.xcassets */,
-				11FE74401DA88A6800AA342C /* Base.lproj */,
-				11FE74451DA88A6800AA342C /* HeyMan.xcdatamodeld */,
-				11FE74471DA88A6800AA342C /* Info.plist */,
-				11FE74481DA88A6800AA342C /* main.m */,
-				11FE74491DA88A6800AA342C /* ViewController.h */,
-				11FE744A1DA88A6800AA342C /* ViewController.m */,
+				11FE745A1DA88E3600AA342C /* AppDelegate.h */,
+				11FE745B1DA88E3600AA342C /* AppDelegate.m */,
+				11FE745C1DA88E3600AA342C /* Assets.xcassets */,
+				11FE745D1DA88E3600AA342C /* Base.lproj */,
+				11FE74621DA88E3600AA342C /* HeyMan.xcdatamodeld */,
+				11FE74641DA88E3600AA342C /* Info.plist */,
+				11FE74651DA88E3600AA342C /* main.m */,
+				11FE74661DA88E3600AA342C /* ViewController.h */,
+				11FE74671DA88E3600AA342C /* ViewController.m */,
 			);
-			name = iOS;
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		11FE74401DA88A6800AA342C /* Base.lproj */ = {
+		11FE74561DA88DA000AA342C /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				11FE74411DA88A6800AA342C /* LaunchScreen.storyboard */,
-				11FE74431DA88A6800AA342C /* Main.storyboard */,
+				11FE74571DA88DAF00AA342C /* Graphics.cpp */,
+				11FE74581DA88DAF00AA342C /* Graphics.h */,
 			);
-			name = Base.lproj;
-			path = Platform/iOS/Base.lproj;
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		11FE745D1DA88E3600AA342C /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				11FE745E1DA88E3600AA342C /* LaunchScreen.storyboard */,
+				11FE74601DA88E3600AA342C /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +174,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FE74501DA88A6800AA342C /* Info.plist in Resources */,
-				11FE744E1DA88A6800AA342C /* Main.storyboard in Resources */,
-				11FE744C1DA88A6800AA342C /* Assets.xcassets in Resources */,
-				11FE744D1DA88A6800AA342C /* LaunchScreen.storyboard in Resources */,
+				11FE746D1DA88E3600AA342C /* Info.plist in Resources */,
+				11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */,
+				11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */,
+				11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,28 +188,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FE744B1DA88A6800AA342C /* AppDelegate.m in Sources */,
-				11FE74511DA88A6800AA342C /* main.m in Sources */,
-				11FE74521DA88A6800AA342C /* ViewController.m in Sources */,
-				11FE744F1DA88A6800AA342C /* HeyMan.xcdatamodeld in Sources */,
+				11FE746F1DA88E3600AA342C /* ViewController.m in Sources */,
+				11FE746E1DA88E3600AA342C /* main.m in Sources */,
+				11FE74551DA88D9C00AA342C /* Application.cpp in Sources */,
+				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
+				11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */,
+				11FE74681DA88E3600AA342C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		11FE74411DA88A6800AA342C /* LaunchScreen.storyboard */ = {
+		11FE745E1DA88E3600AA342C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				11FE74421DA88A6800AA342C /* Base */,
+				11FE745F1DA88E3600AA342C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		11FE74431DA88A6800AA342C /* Main.storyboard */ = {
+		11FE74601DA88E3600AA342C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				11FE74441DA88A6800AA342C /* Base */,
+				11FE74611DA88E3600AA342C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -328,14 +347,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		11FE74451DA88A6800AA342C /* HeyMan.xcdatamodeld */ = {
+		11FE74621DA88E3600AA342C /* HeyMan.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				11FE74461DA88A6800AA342C /* HeyMan.xcdatamodel */,
+				11FE74631DA88E3600AA342C /* HeyMan.xcdatamodel */,
 			);
-			currentVersion = 11FE74461DA88A6800AA342C /* HeyMan.xcdatamodel */;
-			name = HeyMan.xcdatamodeld;
-			path = Platform/iOS/HeyMan.xcdatamodeld;
+			currentVersion = 11FE74631DA88E3600AA342C /* HeyMan.xcdatamodel */;
+			path = HeyMan.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
