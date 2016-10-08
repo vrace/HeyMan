@@ -1,45 +1,63 @@
 #include "OpenGLGraphics.h"
 
+OpenGLGraphics::OpenGLGraphics()
+	: rc_(nullptr)
+{
+	vertices_.reserve(300);
+}
+
 void OpenGLGraphics::Clear()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	vertices_.clear();
 }
 
 void OpenGLGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &c)
 {
-	// No optimization yet
-	unsigned parts = a.Parts() | b.Parts() | c.Parts();
-	Vertex arr[] = { a, b, c };
-	float *vp = (float*)&arr[0];
+	// TODO: commit if texture changes
 
-	glEnableClientState(GL_VERTEX_ARRAY);
-
-	if ((parts & Vertex::vpColor))
-		glEnableClientState(GL_COLOR_ARRAY);
-
-	if ((parts & Vertex::vpTexCoord))
-	{
-		glEnable(GL_TEXTURE);
-		glBindTexture(GL_TEXTURE_2D, 0); // huh?
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	}
-
-	glVertexPointer(3, GL_FLOAT, sizeof(Vertex), vp);
-	glColorPointer(4, GL_FLOAT, sizeof(Vertex), vp + 3);
-	glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), vp + 7);
-
-	glDrawArrays(GL_TRIANGLES, 0, 3);
-
-	glDisableClientState(GL_VERTEX_ARRAY);
-	glDisableClientState(GL_COLOR_ARRAY);
-
-	glDisable(GL_TEXTURE);
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	vertices_.push_back(a);
+	vertices_.push_back(b);
+	vertices_.push_back(c);
 }
 
 void OpenGLGraphics::Commit()
 {
-	// TODO: commit the draw
+	if (!vertices_.empty())
+	{
+		float *vp = (float*)&vertices_[0];
+
+		unsigned parts = Vertex::vpVertex;
+		for (const auto &v : vertices_)
+			parts |= v.Parts();
+
+		glEnableClientState(GL_VERTEX_ARRAY);
+		glVertexPointer(3, GL_FLOAT, sizeof(Vertex), vp);
+
+		if ((parts & Vertex::vpColor))
+		{
+			glEnableClientState(GL_COLOR_ARRAY);
+			glColorPointer(4, GL_FLOAT, sizeof(Vertex), vp + 3);
+		}
+
+		if ((parts & Vertex::vpTexCoord))
+		{
+			glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+			glEnable(GL_TEXTURE);
+			glBindTexture(GL_TEXTURE_2D, 0);  // TODO: get texture id
+			glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), vp + 7);
+		}
+
+		glDrawArrays(GL_TRIANGLES, 0, vertices_.size());
+
+		glDisableClientState(GL_VERTEX_ARRAY);
+		glDisableClientState(GL_COLOR_ARRAY);
+		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+
+		glDisable(GL_TEXTURE);
+
+		vertices_.clear();
+	}
 }
 
 void OpenGLGraphics::Init(HDC hdc, RECT &rc)
@@ -61,8 +79,12 @@ void OpenGLGraphics::Init(HDC hdc, RECT &rc)
 
 	glShadeModel(GL_SMOOTH);
 	
+	glEnable(GL_DEPTH_TEST);
+
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
 	glClearColor(0x64 / 255.0f, 0x95 / 255.0f, 0xed / 255.0f, 1.0f);
 }

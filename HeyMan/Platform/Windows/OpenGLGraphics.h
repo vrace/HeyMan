@@ -4,12 +4,13 @@
 #include <Windows.h>
 #include <gl/GL.h>
 #include <gl/GLU.h>
+#include <vector>
 #include "../../Graphics/Graphics.h"
 
 class OpenGLGraphics : public Graphics
 {
 public:
-	OpenGLGraphics() = default;
+	OpenGLGraphics();
 	~OpenGLGraphics() = default;
 
 	virtual void Clear() override;
@@ -27,6 +28,7 @@ private:
 
 private:
 	HGLRC rc_;
+	std::vector<Vertex> vertices_;
 };
 
 #endif
