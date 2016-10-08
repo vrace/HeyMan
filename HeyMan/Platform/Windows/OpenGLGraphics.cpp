@@ -5,10 +5,36 @@ void OpenGLGraphics::Clear()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void OpenGLGraphics::Triangle()
+void OpenGLGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &c)
 {
-	// TODO: draw triangle.
-	// Need a vertex type
+	// No optimization yet
+	unsigned parts = a.Parts() | b.Parts() | c.Parts();
+	Vertex arr[] = { a, b, c };
+	float *vp = (float*)&arr[0];
+
+	glEnableClientState(GL_VERTEX_ARRAY);
+
+	if ((parts & Vertex::vpColor))
+		glEnableClientState(GL_COLOR_ARRAY);
+
+	if ((parts & Vertex::vpTexCoord))
+	{
+		glEnable(GL_TEXTURE);
+		glBindTexture(GL_TEXTURE_2D, 0); // huh?
+		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	}
+
+	glVertexPointer(3, GL_FLOAT, sizeof(Vertex), vp);
+	glColorPointer(4, GL_FLOAT, sizeof(Vertex), vp + 3);
+	glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), vp + 7);
+
+	glDrawArrays(GL_TRIANGLES, 0, 3);
+
+	glDisableClientState(GL_VERTEX_ARRAY);
+	glDisableClientState(GL_COLOR_ARRAY);
+
+	glDisable(GL_TEXTURE);
+	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 }
 
 void OpenGLGraphics::Commit()

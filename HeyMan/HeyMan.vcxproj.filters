@@ -22,6 +22,9 @@
     <ClCompile Include="Platform\Windows\OpenGLGraphics.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics\Vertex.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
@@ -30,6 +33,9 @@
     </ClInclude>
     <ClInclude Include="Platform\Windows\OpenGLGraphics.h">
       <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Vertex.h">
+      <Filter>Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

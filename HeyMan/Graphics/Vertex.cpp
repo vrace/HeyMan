@@ -31,10 +31,10 @@ unsigned Vertex::Parts() const
 
 bool Vertex::HasColor() const
 {
-    return parts_ & vpColor;
+    return (parts_ & vpColor) != 0;
 }
 
 bool Vertex::HasTexCoord() const
 {
-    return parts_ & vpTexCoord;
+    return (parts_ & vpTexCoord) != 0;
 }

@@ -79,12 +79,14 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Graphics\Graphics.cpp" />
+    <ClCompile Include="Graphics\Vertex.cpp" />
     <ClCompile Include="Platform\Windows\Main.cpp" />
     <ClCompile Include="Platform\Windows\OpenGLGraphics.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Graphics\Graphics.h" />
+    <ClInclude Include="Graphics\Vertex.h" />
     <ClInclude Include="Platform\Windows\OpenGLGraphics.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
