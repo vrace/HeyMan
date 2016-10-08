@@ -2,6 +2,7 @@
 #define HEYMAN_GRAPHICS_H
 
 #include <memory>
+#include "Vertex.h"
 
 class Graphics
 {
@@ -10,7 +11,7 @@ public:
 	virtual ~Graphics() = default;
 
 	virtual void Clear() = 0;
-	virtual void Triangle() = 0;
+	virtual void Triangle(const Vertex &a, const Vertex &b, const Vertex &c) = 0;
 	virtual void Commit() = 0;
 
 private:

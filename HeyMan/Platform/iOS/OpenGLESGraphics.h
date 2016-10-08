@@ -8,7 +8,7 @@ public:
     ~OpenGLESGraphics() = default;
     
     virtual void Clear() override;
-    virtual void Triangle() override;
+    virtual void Triangle(const Vertex &a, const Vertex &b, const Vertex &c) override;
     virtual void Commit() override;
     
     static void InitGraphics(GLKView *view);
