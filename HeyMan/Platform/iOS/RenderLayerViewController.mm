@@ -1,7 +1,12 @@
 #import "RenderLayerViewController.h"
 #import "OpenGLESGraphics.h"
+#import "../../Application.h"
+#import <memory>
 
 @interface RenderLayerViewController ()
+{
+    std::unique_ptr<Application> theApp;
+}
 
 @end
 
@@ -12,23 +17,23 @@
     [super viewDidLoad];
     
     OpenGLESGraphics::InitGraphics((GLKView*)self.view);
+    
+    Application *p = new Application();
+    theApp = std::unique_ptr<Application>(p);
+    theApp->Init();
 }
 
 - (void)update
 {
-    //float delta = (float)self.timeSinceLastUpdate;
+    float delta = (float)self.timeSinceLastUpdate;
+    theApp->Update(delta);
 }
 
 - (void)glkView:(GLKView*)view drawInRect:(CGRect)rect
 {
     CGRect rc = self.view.frame;
     OpenGLESGraphics::BeginRender(&rc);
-    
-    theGraphics->Triangle(
-        Vertex(100, 100, 0, 1, 0, 0, 1),
-        Vertex(100, 200, 0, 0, 1, 0, 1),
-        Vertex(200, 200, 0, 0, 0, 1, 1));
-    
+    theApp->Render();
     OpenGLESGraphics::EndRender();
 }
 
