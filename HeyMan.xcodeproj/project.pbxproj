@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11FE744B1DA88A6800AA342C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE743E1DA88A6800AA342C /* AppDelegate.m */; };
+		11FE744C1DA88A6800AA342C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FE743F1DA88A6800AA342C /* Assets.xcassets */; };
+		11FE744D1DA88A6800AA342C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74411DA88A6800AA342C /* LaunchScreen.storyboard */; };
+		11FE744E1DA88A6800AA342C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74431DA88A6800AA342C /* Main.storyboard */; };
+		11FE744F1DA88A6800AA342C /* HeyMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74451DA88A6800AA342C /* HeyMan.xcdatamodeld */; };
+		11FE74501DA88A6800AA342C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11FE74471DA88A6800AA342C /* Info.plist */; };
+		11FE74511DA88A6800AA342C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74481DA88A6800AA342C /* main.m */; };
+		11FE74521DA88A6800AA342C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FE744A1DA88A6800AA342C /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FE743D1DA88A6800AA342C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Platform/iOS/AppDelegate.h; sourceTree = "<group>"; };
+		11FE743E1DA88A6800AA342C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Platform/iOS/AppDelegate.m; sourceTree = "<group>"; };
+		11FE743F1DA88A6800AA342C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Platform/iOS/Assets.xcassets; sourceTree = "<group>"; };
+		11FE74421DA88A6800AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11FE74441DA88A6800AA342C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		11FE74461DA88A6800AA342C /* HeyMan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeyMan.xcdatamodel; sourceTree = "<group>"; };
+		11FE74471DA88A6800AA342C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platform/iOS/Info.plist; sourceTree = "<group>"; };
+		11FE74481DA88A6800AA342C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Platform/iOS/main.m; sourceTree = "<group>"; };
+		11FE74491DA88A6800AA342C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Platform/iOS/ViewController.h; sourceTree = "<group>"; };
+		11FE744A1DA88A6800AA342C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Platform/iOS/ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11FE741B1DA8899300AA342C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11FE74151DA8899300AA342C = {
+			isa = PBXGroup;
+			children = (
+				11FE74201DA8899300AA342C /* HeyMan */,
+				11FE741F1DA8899300AA342C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11FE741F1DA8899300AA342C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11FE741E1DA8899300AA342C /* HeyMan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11FE74201DA8899300AA342C /* HeyMan */ = {
+			isa = PBXGroup;
+			children = (
+				11FE743B1DA88A3B00AA342C /* Platform */,
+			);
+			path = HeyMan;
+			sourceTree = "<group>";
+		};
+		11FE743B1DA88A3B00AA342C /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				11FE743C1DA88A4300AA342C /* iOS */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
+		11FE743C1DA88A4300AA342C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				11FE743D1DA88A6800AA342C /* AppDelegate.h */,
+				11FE743E1DA88A6800AA342C /* AppDelegate.m */,
+				11FE743F1DA88A6800AA342C /* Assets.xcassets */,
+				11FE74401DA88A6800AA342C /* Base.lproj */,
+				11FE74451DA88A6800AA342C /* HeyMan.xcdatamodeld */,
+				11FE74471DA88A6800AA342C /* Info.plist */,
+				11FE74481DA88A6800AA342C /* main.m */,
+				11FE74491DA88A6800AA342C /* ViewController.h */,
+				11FE744A1DA88A6800AA342C /* ViewController.m */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		11FE74401DA88A6800AA342C /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				11FE74411DA88A6800AA342C /* LaunchScreen.storyboard */,
+				11FE74431DA88A6800AA342C /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = Platform/iOS/Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11FE741D1DA8899300AA342C /* HeyMan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FE74381DA8899300AA342C /* Build configuration list for PBXNativeTarget "HeyMan" */;
+			buildPhases = (
+				11FE741A1DA8899300AA342C /* Sources */,
+				11FE741B1DA8899300AA342C /* Frameworks */,
+				11FE741C1DA8899300AA342C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeyMan;
+			productName = HeyMan;
+			productReference = 11FE741E1DA8899300AA342C /* HeyMan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11FE74161DA8899300AA342C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Liu Yang";
+				TargetAttributes = {
+					11FE741D1DA8899300AA342C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 11FE74191DA8899300AA342C /* Build configuration list for PBXProject "HeyMan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11FE74151DA8899300AA342C;
+			productRefGroup = 11FE741F1DA8899300AA342C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11FE741D1DA8899300AA342C /* HeyMan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11FE741C1DA8899300AA342C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FE74501DA88A6800AA342C /* Info.plist in Resources */,
+				11FE744E1DA88A6800AA342C /* Main.storyboard in Resources */,
+				11FE744C1DA88A6800AA342C /* Assets.xcassets in Resources */,
+				11FE744D1DA88A6800AA342C /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11FE741A1DA8899300AA342C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FE744B1DA88A6800AA342C /* AppDelegate.m in Sources */,
+				11FE74511DA88A6800AA342C /* main.m in Sources */,
+				11FE74521DA88A6800AA342C /* ViewController.m in Sources */,
+				11FE744F1DA88A6800AA342C /* HeyMan.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11FE74411DA88A6800AA342C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11FE74421DA88A6800AA342C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		11FE74431DA88A6800AA342C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11FE74441DA88A6800AA342C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11FE74361DA8899300AA342C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11FE74371DA8899300AA342C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11FE74391DA8899300AA342C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/HeyMan/Platform/iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ly.HeyMan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11FE743A1DA8899300AA342C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/HeyMan/Platform/iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ly.HeyMan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11FE74191DA8899300AA342C /* Build configuration list for PBXProject "HeyMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FE74361DA8899300AA342C /* Debug */,
+				11FE74371DA8899300AA342C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11FE74381DA8899300AA342C /* Build configuration list for PBXNativeTarget "HeyMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FE74391DA8899300AA342C /* Debug */,
+				11FE743A1DA8899300AA342C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11FE74451DA88A6800AA342C /* HeyMan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11FE74461DA88A6800AA342C /* HeyMan.xcdatamodel */,
+			);
+			currentVersion = 11FE74461DA88A6800AA342C /* HeyMan.xcdatamodel */;
+			name = HeyMan.xcdatamodeld;
+			path = Platform/iOS/HeyMan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 11FE74161DA8899300AA342C /* Project object */;
+}
