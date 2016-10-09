@@ -7,7 +7,17 @@
 #import <AVFoundation/AVMediaFormat.h>
 #import <AVFoundation/AVCaptureVideoPreviewLayer.h>
 
+#include "../../Camera/Camera.h"
+
+namespace
+{
+    ViewController *_mainVC = nullptr;
+}
+
 @interface ViewController () <AVCaptureVideoDataOutputSampleBufferDelegate>
+{
+    CameraFeedHandler *cameraFeedHandler_;
+}
 
 @property (strong, nonatomic) RenderLayerViewController *renderLayerVC;
 
@@ -25,7 +35,11 @@
 {
     [super viewDidLoad];
     
+    cameraFeedHandler_ = nullptr;
+    _mainVC = self;
+    
     [self setupCamera];
+    _captureSession = self.captureSession;
     
     self.renderLayerVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RenderLayer"];
     [self.view addSubview:self.renderLayerVC.view];
@@ -35,17 +49,21 @@
     self.renderLayerVC.view.frame = self.view.bounds;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidDisappear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    
+    [super viewDidDisappear:animated];
+    [self stopCameraCapture];
+}
+
+- (void)startCameraCapture:(CameraFeedHandler*)handler
+{
+    cameraFeedHandler_ = handler;
     [self.captureSession startRunning];
     self.capturePreview.frame = self.view.bounds;
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)stopCameraCapture
 {
-    [super viewDidDisappear:animated];
     [self.captureSession stopRunning];
 }
 
@@ -101,9 +119,27 @@
     size_t width = CVPixelBufferGetWidth(imageBuffer);
     size_t height = CVPixelBufferGetHeight(imageBuffer);
     
-    //[self.gamevc updateCameraData:baseAddress bytesPerRow:bytesPerRow width:width height:height];
+    if (cameraFeedHandler_)
+        cameraFeedHandler_->CameraFeed(baseAddress, (int)bytesPerRow, (int)width, (int)height);
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+}
+
+bool CameraCaptureStart(CameraFeedHandler *cameraFeedHandler)
+{
+    if (_mainVC)
+    {
+        [_mainVC startCameraCapture:cameraFeedHandler];
+        return true;
+    }
+    
+    return false;
+}
+
+void CameraCaptureStop(void)
+{
+    if (_mainVC)
+        [_mainVC stopCameraCapture];
 }
 
 @end

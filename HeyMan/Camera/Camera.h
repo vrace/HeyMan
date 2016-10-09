@@ -4,7 +4,7 @@
 class CameraFeedHandler
 {
 public:
-    virtual void CameraFeed() = 0;  // TOOD: what parameters do we need?
+    virtual void CameraFeed(void *buffer, int bytesPerRow, int width, int height) = 0;
 };
 
 extern bool CameraCaptureStart(CameraFeedHandler *cameraFeedHandler);

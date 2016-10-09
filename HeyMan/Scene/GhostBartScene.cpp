@@ -1,5 +1,6 @@
 #include "GhostBartScene.h"
 #include "../Graphics/Graphics.h"
+#include "../Camera/Camera.h"
 #include <iostream>
 
 void GhostBartScene::SceneEnter()
@@ -9,11 +10,15 @@ void GhostBartScene::SceneEnter()
     bart_ = LoadTexture("bart.jpg");
     if (!bart_)
         std::cout << "Where is Bart?!" << std::endl;
+    
+    CameraCaptureStart(nullptr);
 }
 
 void GhostBartScene::SceneExit()
 {
     std::cout << "**** EXITING GHOST BART SCENE ****" << std::endl;
+    
+    CameraCaptureStop();
 }
 
 void GhostBartScene::Update(float delta)
