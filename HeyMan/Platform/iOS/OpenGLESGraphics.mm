@@ -2,9 +2,20 @@
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
 
+OpenGLESGraphics::OpenGLESGraphics()
+: context_(nullptr)
+, texture_(nullptr)
+{
+}
+
 void OpenGLESGraphics::Clear()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void OpenGLESGraphics::SetTexture(const Texture *texture)
+{
+    texture_ = dynamic_cast<const OpenGLESTexture*>(texture);
 }
 
 void OpenGLESGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &c)
@@ -21,8 +32,12 @@ void OpenGLESGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &
     
     if ((parts & Vertex::vpTexCoord))
     {
-        glEnable(GL_TEXTURE);
-        glBindTexture(GL_TEXTURE_2D, 0); // huh?
+        glEnable(GL_TEXTURE_2D);
+        
+        GLuint texid = 0;
+        if (texture_)
+            texid = texture_->TextureInfo().name;
+        glBindTexture(GL_TEXTURE_2D, texid);
         glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     }
     
@@ -35,7 +50,7 @@ void OpenGLESGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_COLOR_ARRAY);
     
-    glDisable(GL_TEXTURE);
+    glDisable(GL_TEXTURE_2D);
     glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 }
 

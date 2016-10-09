@@ -1,13 +1,15 @@
 #import "../../Graphics/Graphics.h"
+#import "OpenGLESTexture.h"
 #import <GLKit/GLKit.h>
 
 class OpenGLESGraphics : public Graphics
 {
 public:
-    OpenGLESGraphics() = default;
+    OpenGLESGraphics();
     ~OpenGLESGraphics() = default;
     
     virtual void Clear() override;
+    virtual void SetTexture(const Texture *texture) override;
     virtual void Triangle(const Vertex &a, const Vertex &b, const Vertex &c) override;
     virtual void Commit() override;
     
@@ -23,4 +25,5 @@ private:
     
 private:
     EAGLContext *context_;
+    const OpenGLESTexture *texture_;
 };

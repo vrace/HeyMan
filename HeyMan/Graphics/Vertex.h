@@ -14,7 +14,7 @@ public:
     Vertex() = delete;
     Vertex(float x, float y, float z);
     Vertex(float x, float y, float z, float r, float g, float b, float a);
-    Vertex(float x, float y, float z, float r, float g, float b, float a, float u, float v);
+    Vertex(float x, float y, float z, float u, float v, float r = 1, float g = 1, float b = 1, float a = 1);
     
     unsigned Parts() const;
     bool HasColor() const;

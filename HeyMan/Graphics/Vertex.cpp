@@ -16,10 +16,10 @@ Vertex::Vertex(float x, float y, float z, float r, float g, float b, float a)
 {
 }
 
-Vertex::Vertex(float x, float y, float z, float r, float g, float b, float a, float u, float v)
+Vertex::Vertex(float x, float y, float z, float u, float v, float r, float g, float b, float a)
 : x_(x), y_(y), z_(z)
 , r_(r), g_(g), b_(b), a_(a)
-, u_(v), v_(v)
+, u_(u), v_(v)
 , parts_(Vertex::vpVertex | Vertex::vpColor | Vertex::vpTexCoord)
 {
 }

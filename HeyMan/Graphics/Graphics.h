@@ -3,6 +3,7 @@
 
 #include <memory>
 #include "Vertex.h"
+#include "Texture.h"
 
 class Graphics
 {
@@ -11,6 +12,7 @@ public:
 	virtual ~Graphics() = default;
 
 	virtual void Clear() = 0;
+    virtual void SetTexture(const Texture *texture) = 0;
 	virtual void Triangle(const Vertex &a, const Vertex &b, const Vertex &c) = 0;
 	virtual void Commit() = 0;
 

@@ -1,6 +1,8 @@
 #ifndef HEYMAN_APPLICATION_H
 #define HEYMAN_APPLICATION_H
 
+#include "Graphics/Texture.h"
+
 class Application
 {
 public:
@@ -16,6 +18,9 @@ public:
 private:
 	Application(const Application&) = delete;
 	Application& operator= (const Application&) = delete;
+    
+private:
+    std::unique_ptr<Texture> bart_;
 };
 
 #endif
