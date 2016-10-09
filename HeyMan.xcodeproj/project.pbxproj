@@ -18,6 +18,8 @@
 		11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D41DA9CD2700F49222 /* Texture.cpp */; };
 		11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */; };
 		11B0D8DC1DA9E22600F49222 /* bart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11B0D8DB1DA9E22600F49222 /* bart.jpg */; };
+		11B0D8E31DAA237000F49222 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8E11DAA237000F49222 /* Camera.cpp */; };
+		11B0D8E81DAA26E400F49222 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B0D8E71DAA26E400F49222 /* CoreVideo.framework */; };
 		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
 		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
 		11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.mm */; };
@@ -46,6 +48,9 @@
 		11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLESTexture.mm; sourceTree = "<group>"; };
 		11B0D8D81DA9D61400F49222 /* OpenGLESTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLESTexture.h; sourceTree = "<group>"; };
 		11B0D8DB1DA9E22600F49222 /* bart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bart.jpg; sourceTree = "<group>"; };
+		11B0D8E11DAA237000F49222 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		11B0D8E21DAA237000F49222 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		11B0D8E71DAA26E400F49222 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B0D8E81DAA26E400F49222 /* CoreVideo.framework in Frameworks */,
 				1144BF4C1DA898E800876030 /* OpenGLES.framework in Frameworks */,
 				1144BF471DA894C700876030 /* UIKit.framework in Frameworks */,
 				1144BF431DA8913900876030 /* AVFoundation.framework in Frameworks */,
@@ -82,6 +88,7 @@
 		1144BF3F1DA890F800876030 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11B0D8E71DAA26E400F49222 /* CoreVideo.framework */,
 				1144BF4B1DA898E800876030 /* OpenGLES.framework */,
 				1144BF461DA894C700876030 /* UIKit.framework */,
 				1144BF401DA8913900876030 /* AVFoundation.framework */,
@@ -97,6 +104,15 @@
 				11B0D8DB1DA9E22600F49222 /* bart.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		11B0D8DD1DAA21A800F49222 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				11B0D8E11DAA237000F49222 /* Camera.cpp */,
+				11B0D8E21DAA237000F49222 /* Camera.h */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		11FE74151DA8899300AA342C = {
@@ -119,6 +135,7 @@
 		11FE74201DA8899300AA342C /* HeyMan */ = {
 			isa = PBXGroup;
 			children = (
+				11B0D8DD1DAA21A800F49222 /* Camera */,
 				11B0D8DA1DA9E1E700F49222 /* Resources */,
 				11FE74561DA88DA000AA342C /* Graphics */,
 				11FE743B1DA88A3B00AA342C /* Platform */,
@@ -255,6 +272,7 @@
 				11FE746E1DA88E3600AA342C /* main.mm in Sources */,
 				11FE74551DA88D9C00AA342C /* Application.cpp in Sources */,
 				11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */,
+				11B0D8E31DAA237000F49222 /* Camera.cpp in Sources */,
 				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
 				11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */,
 				11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */,
@@ -324,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -362,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -374,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/HeyMan/Platform/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ly.HeyMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/HeyMan/Platform/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ly.HeyMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
