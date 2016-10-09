@@ -1,14 +1,13 @@
+#include <iostream>
 #include "Application.h"
 #include "Graphics/Graphics.h"
-#include <iostream>
+#include "Scene/GhostBartScene.h"
 
 bool Application::Init()
 {
 	std::cout << "**** APPLICATION INIT ****" << std::endl;
     
-    bart_ = LoadTexture("bart.jpg");
-    if (!bart_)
-        std::cout << "Where is bart?!" << std::endl;
+    ReplaceScene(std::unique_ptr<Scene>(new GhostBartScene()));
     
 	return true;
 }
@@ -16,21 +15,43 @@ bool Application::Init()
 void Application::Destroy()
 {
 	std::cout << "**** APPLICATION DESTROY ****" << std::endl;
+    
+    if (dyingScene_)
+        dyingScene_->SceneExit();
+    
+    if (currentScene_)
+        currentScene_->SceneExit();
 }
 
 void Application::Update(float delta)
 {
+    if (currentScene_)
+        currentScene_->Update(delta);
+    
+    if (dyingScene_)
+    {
+        dyingScene_->SceneExit();
+        dyingScene_.reset();
+    }
 }
 
 void Application::Render()
 {
-    theGraphics->SetTexture(&*bart_);
+    if (dyingScene_)
+        dyingScene_->Render();
     
-    theGraphics->Triangle(Vertex(100, 100, 0, 0, 0),
-                          Vertex(100, 100 + bart_->Height(), 0, 0, 1),
-                          Vertex(100 + bart_->Width(), 100 + bart_->Height(), 0, 1, 1));
+    if (currentScene_)
+        currentScene_->Render();
+}
+
+void Application::ReplaceScene(std::unique_ptr<Scene> scene)
+{
+    if (dyingScene_)
+        dyingScene_->SceneExit();
     
-    theGraphics->Triangle(Vertex(100 + bart_->Width(), 100 + bart_->Height(), 0, 1, 1),
-                          Vertex(100, 100, 0, 0, 0),
-                          Vertex(100 + bart_->Width(), 100, 0, 1, 0));
+    if (currentScene_)
+        dyingScene_ = std::move(currentScene_);
+    
+    currentScene_ = std::move(scene);
+    currentScene_->SceneEnter();
 }
