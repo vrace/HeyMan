@@ -2,6 +2,7 @@
 
 OpenGLGraphics::OpenGLGraphics()
 	: rc_(nullptr)
+	, texture_(nullptr)
 {
 	vertices_.reserve(300);
 }
@@ -10,6 +11,15 @@ void OpenGLGraphics::Clear()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	vertices_.clear();
+}
+
+void OpenGLGraphics::SetTexture(const Texture *texture)
+{
+	auto *previous = texture_;
+	texture_ = dynamic_cast<const OpenGLTexture*>(texture);
+
+	if (previous != texture_)
+		Commit();
 }
 
 void OpenGLGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &c)
@@ -43,8 +53,13 @@ void OpenGLGraphics::Commit()
 		if ((parts & Vertex::vpTexCoord))
 		{
 			glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-			glEnable(GL_TEXTURE);
-			glBindTexture(GL_TEXTURE_2D, 0);  // TODO: get texture id
+			glEnable(GL_TEXTURE_2D);
+
+			GLuint texid = 0;
+			if (texture_)
+				texid = texture_->TextureID();
+
+			glBindTexture(GL_TEXTURE_2D, texid);
 			glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), vp + 7);
 		}
 

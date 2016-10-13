@@ -56,7 +56,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,16 +78,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Camera\Camera.cpp" />
     <ClCompile Include="Graphics\Graphics.cpp" />
+    <ClCompile Include="Graphics\Texture.cpp" />
     <ClCompile Include="Graphics\Vertex.cpp" />
+    <ClCompile Include="Platform\Windows\DummyCamera.cpp" />
+    <ClCompile Include="Platform\Windows\InitGdiplus.cpp" />
     <ClCompile Include="Platform\Windows\Main.cpp" />
     <ClCompile Include="Platform\Windows\OpenGLGraphics.cpp" />
+    <ClCompile Include="Platform\Windows\OpenGLTexture.cpp" />
+    <ClCompile Include="Scene\GhostBartScene.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Camera\Camera.h" />
     <ClInclude Include="Graphics\Graphics.h" />
+    <ClInclude Include="Graphics\Texture.h" />
     <ClInclude Include="Graphics\Vertex.h" />
+    <ClInclude Include="Platform\Windows\DummyCamera.h" />
+    <ClInclude Include="Platform\Windows\InitGdiplus.h" />
     <ClInclude Include="Platform\Windows\OpenGLGraphics.h" />
+    <ClInclude Include="Platform\Windows\OpenGLTexture.h" />
+    <ClInclude Include="Platform\Windows\Platform.h" />
+    <ClInclude Include="Scene\GhostBartScene.h" />
+    <ClInclude Include="Scene\Scene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

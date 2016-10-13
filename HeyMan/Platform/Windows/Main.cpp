@@ -1,4 +1,5 @@
-#include <Windows.h>
+#include "Platform.h"
+
 #include <tchar.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,6 +8,7 @@
 
 #include "../../Application.h"
 #include "OpenGLGraphics.h"
+#include "InitGdiplus.h"
 
 static const TCHAR APPLICATION_NAME[] = TEXT("HeyMan");
 
@@ -17,6 +19,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	HWND hwnd;
 	WNDCLASS wndclass;
 	MSG msg;
+
+	INIT_GDI_PLUS();
 
 	wndclass.cbClsExtra = 0;
 	wndclass.cbWndExtra = 0;
@@ -42,13 +46,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	AllocConsole();
 	freopen("CONOUT$", "w", stdout);
 
-	std::unique_ptr<Application> theApp = std::make_unique<Application>();
-	theApp->Init();
-
 	HDC hdc = GetDC(hwnd);
 	RECT rc;
 	GetClientRect(hwnd, &rc);
 	OpenGLGraphics::InitGraphics(hdc, rc);
+
+	std::unique_ptr<Application> theApp = std::make_unique<Application>();
+	theApp->Init();
 
 	LARGE_INTEGER freq;
 	LARGE_INTEGER counter;

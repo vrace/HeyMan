@@ -30,11 +30,11 @@ void GhostBartScene::Render()
 {
     theGraphics->SetTexture(&*bart_);
     
-    theGraphics->Triangle(Vertex(100, 100, 0, 0, 0, 1, 1, 1, 0.5f),
-                          Vertex(100, 100 + bart_->Height(), 0, 0, 1, 1, 1, 1, 0.5f),
-                          Vertex(100 + bart_->Width(), 100 + bart_->Height(), 0, 1, 1, 1, 1, 1, 0.5f));
+    theGraphics->Triangle(Vertex(100, 100, 0, 0, 0),
+                          Vertex(100, 100 + bart_->Height(), 0, 0, 1),
+                          Vertex(100 + bart_->Width(), 100 + bart_->Height(), 0, 1, 1));
     
-    theGraphics->Triangle(Vertex(100 + bart_->Width(), 100 + bart_->Height(), 0, 1, 1, 1, 1, 1, 0.5f),
-                          Vertex(100, 100, 0, 0, 0, 1, 1, 1, 0.5f),
-                          Vertex(100 + bart_->Width(), 100, 0, 1, 0, 1, 1, 1, 0.5f));
+    theGraphics->Triangle(Vertex(100 + bart_->Width(), 100 + bart_->Height(), 0, 1, 1),
+                          Vertex(100, 100, 0, 0, 0, 1),
+                          Vertex(100 + bart_->Width(), 100, 0, 1, 0));
 }
