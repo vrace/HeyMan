@@ -18,9 +18,9 @@ enum ApplicationScenes
 class Application : public SceneStack
 {
 public:
-	Application() = default;
-	~Application() = default;
-
+    Application() = default;
+    ~Application() = default;
+    
 	bool Init();
 	void Destroy();
     
@@ -37,5 +37,7 @@ private:
     std::unique_ptr<Scene> sceneStorage_[asNumScenes];
     vec2 screenSize_;
 };
+
+extern std::unique_ptr<Application> theApp;
 
 #endif

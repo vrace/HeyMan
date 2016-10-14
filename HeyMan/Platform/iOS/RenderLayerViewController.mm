@@ -3,10 +3,9 @@
 #import "../../Application.h"
 #import <memory>
 
+std::unique_ptr<Application> theApp;
+
 @interface RenderLayerViewController ()
-{
-    std::unique_ptr<Application> theApp;
-}
 
 @end
 

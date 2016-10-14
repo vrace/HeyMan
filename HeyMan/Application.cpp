@@ -2,14 +2,16 @@
 #include "Application.h"
 #include "Graphics/Graphics.h"
 #include "Scene/GhostBartScene.h"
+#include "Scene/WelcomeScene.h"
 
 bool Application::Init()
 {
 	std::cout << "**** APPLICATION INIT ****" << std::endl;
     
+    sceneStorage_[asWelcome] = std::unique_ptr<Scene>(new WelcomeScene());
     sceneStorage_[asBart] = std::unique_ptr<Scene>(new GhostBartScene());
     
-    PushScene(asBart);
+    PushScene(asWelcome);
     
 	return true;
 }
@@ -33,3 +35,4 @@ const vec2& Application::ScreenSize() const
 {
     return screenSize_;
 }
+

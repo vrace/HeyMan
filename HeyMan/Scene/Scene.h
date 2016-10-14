@@ -9,12 +9,12 @@ public:
     Scene() = default;
     virtual ~Scene() = default;
     
-    virtual void OnEnter() = 0;
-    virtual void OnExit() = 0;
-    virtual void OnSuspend() = 0;
-    virtual void OnResume() = 0;
+    virtual void OnEnter();
+    virtual void OnExit();
+    virtual void OnSuspend();
+    virtual void OnResume();
     
-    virtual void OnTouch(int x, int y) = 0;
+    virtual void OnTouch(int x, int y);
     
     virtual void Update(float delta) = 0;
     virtual void Render() = 0;

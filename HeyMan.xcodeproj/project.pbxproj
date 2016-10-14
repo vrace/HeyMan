@@ -16,6 +16,7 @@
 		1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */; };
 		1158DAF41DB07BC0007D7308 /* SceneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF21DB07BC0007D7308 /* SceneStack.cpp */; };
 		1158DAF71DB0B4BE007D7308 /* WelcomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF51DB0B4BE007D7308 /* WelcomeScene.cpp */; };
+		1158DB041DB0CC0A007D7308 /* panic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1158DB031DB0CC0A007D7308 /* panic.jpg */; };
 		11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D11DA8E56600F49222 /* Vertex.cpp */; };
 		11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D41DA9CD2700F49222 /* Texture.cpp */; };
 		11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */; };
@@ -52,6 +53,7 @@
 		1158DB001DB0BC85007D7308 /* Vector2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
 		1158DB011DB0BD11007D7308 /* Vector3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
 		1158DB021DB0BD8E007D7308 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		1158DB031DB0CC0A007D7308 /* panic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panic.jpg; sourceTree = "<group>"; };
 		11B0D8D11DA8E56600F49222 /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		11B0D8D21DA8E56600F49222 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		11B0D8D41DA9CD2700F49222 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		11B0D8DA1DA9E1E700F49222 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1158DB031DB0CC0A007D7308 /* panic.jpg */,
 				11B0D8DB1DA9E22600F49222 /* bart.jpg */,
 			);
 			path = Resources;
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */,
+				1158DB041DB0CC0A007D7308 /* panic.jpg in Resources */,
 				11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */,
 				11B0D8DC1DA9E22600F49222 /* bart.jpg in Resources */,
 				11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */,
