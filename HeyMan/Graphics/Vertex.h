@@ -1,6 +1,8 @@
 #ifndef HEYMAN_VERTEX_H
 #define HEYMAN_VERTEX_H
 
+#include "../Types/Types.h"
+
 class Vertex
 {
 public:
@@ -12,18 +14,23 @@ public:
     };
     
     Vertex() = delete;
-    Vertex(float x, float y, float z);
-    Vertex(float x, float y, float z, float r, float g, float b, float a);
-    Vertex(float x, float y, float z, float u, float v, float r = 1, float g = 1, float b = 1, float a = 1);
+    Vertex(const vec3f &vec);
+    Vertex(const vec3f &vec, const Color &color);
+    Vertex(const vec3f &vec, const UV &uv, const Color &color = Color());
     
     unsigned Parts() const;
     bool HasColor() const;
     bool HasTexCoord() const;
+
+	float* VertexPointer() const;
+	float* ColorPointer() const;
+	float* TexCoordPointer() const;
+	static int Stride();
     
 private:
-    float x_, y_, z_;
-    float r_, g_, b_, a_;
-    float u_, v_;
+	vec3f vec_;
+	Color color_;
+	UV uv_;
     unsigned parts_;
 };
 

@@ -11,6 +11,7 @@
 #include "InitGdiplus.h"
 
 static const TCHAR APPLICATION_NAME[] = TEXT("HeyMan");
+std::unique_ptr<Application> theApp;
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam);
 
@@ -51,7 +52,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	GetClientRect(hwnd, &rc);
 	OpenGLGraphics::InitGraphics(hdc, rc);
 
-	std::unique_ptr<Application> theApp = std::make_unique<Application>();
+	theApp = std::make_unique<Application>();
 	theApp->Init();
 
 	LARGE_INTEGER freq;

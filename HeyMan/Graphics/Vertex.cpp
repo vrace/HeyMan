@@ -1,26 +1,23 @@
 #include "Vertex.h"
 
-Vertex::Vertex(float x, float y, float z)
-: x_(x), y_(y), z_(z)
-, r_(1), g_(1), b_(1), a_(1)
-, u_(0), v_(0)
-, parts_(Vertex::vpVertex)
+Vertex::Vertex(const vec3f &vec)
+	: vec_(vec)
+	, parts_(Vertex::vpVertex)
 {
 }
 
-Vertex::Vertex(float x, float y, float z, float r, float g, float b, float a)
-: x_(x), y_(y), z_(z)
-, r_(r), g_(g), b_(b), a_(a)
-, u_(0), v_(0)
-, parts_(Vertex::vpVertex | Vertex::vpColor)
+Vertex::Vertex(const vec3f &vec, const Color &color)
+	: vec_(vec)
+	, color_(color)
+	, parts_(Vertex::vpVertex | Vertex::vpColor)
 {
 }
 
-Vertex::Vertex(float x, float y, float z, float u, float v, float r, float g, float b, float a)
-: x_(x), y_(y), z_(z)
-, r_(r), g_(g), b_(b), a_(a)
-, u_(u), v_(v)
-, parts_(Vertex::vpVertex | Vertex::vpColor | Vertex::vpTexCoord)
+Vertex::Vertex(const vec3f &vec, const UV &uv, const Color &color)
+	: vec_(vec)
+	, color_(color)
+	, uv_(uv)
+	, parts_(Vertex::vpVertex | Vertex::vpColor | Vertex::vpTexCoord)
 {
 }
 
@@ -37,4 +34,24 @@ bool Vertex::HasColor() const
 bool Vertex::HasTexCoord() const
 {
     return (parts_ & vpTexCoord) != 0;
+}
+
+float* Vertex::VertexPointer() const
+{
+	return (float*)&vec_;
+}
+
+float* Vertex::ColorPointer() const
+{
+	return (float*)&color_;
+}
+
+float* Vertex::TexCoordPointer() const
+{
+	return (float*)&uv_;
+}
+
+int Vertex::Stride()
+{
+	return sizeof(Vertex);
 }

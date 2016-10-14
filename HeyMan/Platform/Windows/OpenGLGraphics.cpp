@@ -35,19 +35,19 @@ void OpenGLGraphics::Commit()
 {
 	if (!vertices_.empty())
 	{
-		float *vp = (float*)&vertices_[0];
+		Vertex *vp = &vertices_[0];
 
 		unsigned parts = Vertex::vpVertex;
 		for (const auto &v : vertices_)
 			parts |= v.Parts();
 
 		glEnableClientState(GL_VERTEX_ARRAY);
-		glVertexPointer(3, GL_FLOAT, sizeof(Vertex), vp);
+		glVertexPointer(3, GL_FLOAT, Vertex::Stride(), vp->VertexPointer());
 
 		if ((parts & Vertex::vpColor))
 		{
 			glEnableClientState(GL_COLOR_ARRAY);
-			glColorPointer(4, GL_FLOAT, sizeof(Vertex), vp + 3);
+			glColorPointer(4, GL_FLOAT, Vertex::Stride(), vp->ColorPointer());
 		}
 
 		if ((parts & Vertex::vpTexCoord))
@@ -60,7 +60,7 @@ void OpenGLGraphics::Commit()
 				texid = texture_->TextureID();
 
 			glBindTexture(GL_TEXTURE_2D, texid);
-			glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), vp + 7);
+			glTexCoordPointer(2, GL_FLOAT, Vertex::Stride(), vp->TexCoordPointer());
 		}
 
 		glDrawArrays(GL_TRIANGLES, 0, vertices_.size());
