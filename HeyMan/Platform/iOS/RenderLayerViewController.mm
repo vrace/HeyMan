@@ -23,6 +23,14 @@
     theApp->Init();
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    CGRect rc = self.view.frame;
+    theApp->SetScreenSize(rc.size.width, rc.size.height);
+}
+
 - (void)update
 {
     float delta = (float)self.timeSinceLastUpdate;

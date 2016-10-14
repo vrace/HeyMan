@@ -4,7 +4,7 @@
 template <class T>
 struct Vector3
 {
-    Vector3() : x(), y(), z() {}
+    Vector3(T _x = T(), T _y = T(), T _z = T()) : x(_x), y(_y), z(_z) {}
     T x, y, z;
 };
 

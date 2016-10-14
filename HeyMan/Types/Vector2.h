@@ -4,7 +4,7 @@
 template <class T>
 struct Vector2
 {
-    Vector2() : x(), y() {}
+    Vector2(T _x = T(), T _y = T()) : x(_x), y(_y) {}
     T x, y;
 };
 

@@ -23,3 +23,13 @@ void Application::PushScene(ApplicationScenes scene, PushSceneMethod method)
 {
     SceneStack::PushScene(sceneStorage_[scene].get(), method);
 }
+
+void Application::SetScreenSize(int width, int height)
+{
+    screenSize_ = vec2(width, height);
+}
+
+const vec2& Application::ScreenSize() const
+{
+    return screenSize_;
+}
