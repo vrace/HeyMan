@@ -14,6 +14,7 @@
 		1144BF4A1DA8955500876030 /* RenderLayerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1144BF491DA8955500876030 /* RenderLayerViewController.mm */; };
 		1144BF4C1DA898E800876030 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF4B1DA898E800876030 /* OpenGLES.framework */; };
 		1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */; };
+		1158DAF41DB07BC0007D7308 /* SceneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF21DB07BC0007D7308 /* SceneStack.cpp */; };
 		11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D11DA8E56600F49222 /* Vertex.cpp */; };
 		11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D41DA9CD2700F49222 /* Texture.cpp */; };
 		11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */; };
@@ -43,6 +44,8 @@
 		1144BF4B1DA898E800876030 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1144BF4D1DA8C56500876030 /* OpenGLESGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLESGraphics.h; sourceTree = "<group>"; };
 		1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLESGraphics.mm; sourceTree = "<group>"; };
+		1158DAF21DB07BC0007D7308 /* SceneStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStack.cpp; sourceTree = "<group>"; };
+		1158DAF31DB07BC0007D7308 /* SceneStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneStack.h; sourceTree = "<group>"; };
 		11B0D8D11DA8E56600F49222 /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		11B0D8D21DA8E56600F49222 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		11B0D8D41DA9CD2700F49222 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 			children = (
 				11B0D8EA1DAA2DE200F49222 /* Scene.cpp */,
 				11B0D8EB1DAA2DE200F49222 /* Scene.h */,
+				1158DAF21DB07BC0007D7308 /* SceneStack.cpp */,
+				1158DAF31DB07BC0007D7308 /* SceneStack.h */,
 				11B0D8ED1DAA2E7C00F49222 /* GhostBartScene.cpp */,
 				11B0D8EE1DAA2E7C00F49222 /* GhostBartScene.h */,
 			);
@@ -291,6 +296,7 @@
 				11FE746E1DA88E3600AA342C /* main.mm in Sources */,
 				11FE74551DA88D9C00AA342C /* Application.cpp in Sources */,
 				11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */,
+				1158DAF41DB07BC0007D7308 /* SceneStack.cpp in Sources */,
 				11B0D8E31DAA237000F49222 /* Camera.cpp in Sources */,
 				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
 				11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */,

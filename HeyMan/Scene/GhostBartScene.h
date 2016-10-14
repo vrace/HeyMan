@@ -10,8 +10,11 @@ public:
     GhostBartScene() = default;
     ~GhostBartScene() = default;
     
-    virtual void SceneEnter() override;
-    virtual void SceneExit() override;
+    virtual void OnEnter() override;
+    virtual void OnExit() override;
+    virtual void OnSuspend() override;
+    virtual void OnResume() override;
+    
     virtual void Update(float delta) override;
     virtual void Render() override;
     

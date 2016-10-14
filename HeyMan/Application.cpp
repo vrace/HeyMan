@@ -7,7 +7,9 @@ bool Application::Init()
 {
 	std::cout << "**** APPLICATION INIT ****" << std::endl;
     
-    ReplaceScene(std::unique_ptr<Scene>(new GhostBartScene()));
+    sceneStorage_[asBart] = std::unique_ptr<Scene>(new GhostBartScene());
+    
+    PushScene(asBart);
     
 	return true;
 }
@@ -15,43 +17,9 @@ bool Application::Init()
 void Application::Destroy()
 {
 	std::cout << "**** APPLICATION DESTROY ****" << std::endl;
-    
-    if (dyingScene_)
-        dyingScene_->SceneExit();
-    
-    if (currentScene_)
-        currentScene_->SceneExit();
 }
 
-void Application::Update(float delta)
+void Application::PushScene(ApplicationScenes scene, PushSceneMethod method)
 {
-    if (currentScene_)
-        currentScene_->Update(delta);
-    
-    if (dyingScene_)
-    {
-        dyingScene_->SceneExit();
-        dyingScene_.reset();
-    }
-}
-
-void Application::Render()
-{
-    if (dyingScene_)
-        dyingScene_->Render();
-    
-    if (currentScene_)
-        currentScene_->Render();
-}
-
-void Application::ReplaceScene(std::unique_ptr<Scene> scene)
-{
-    if (dyingScene_)
-        dyingScene_->SceneExit();
-    
-    if (currentScene_)
-        dyingScene_ = std::move(currentScene_);
-    
-    currentScene_ = std::move(scene);
-    currentScene_->SceneEnter();
+    SceneStack::PushScene(sceneStorage_[scene].get(), method);
 }

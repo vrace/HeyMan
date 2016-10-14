@@ -1,10 +1,20 @@
 #ifndef HEYMAN_APPLICATION_H
 #define HEYMAN_APPLICATION_H
 
-#include "Scene/Scene.h"
+#include "Scene/SceneStack.h"
 #include <memory>
 
-class Application
+enum ApplicationScenes
+{
+    asWelcome,
+    asRecord,
+    asScan,
+    asBart,
+    
+    asNumScenes,
+};
+
+class Application : public SceneStack
 {
 public:
 	Application() = default;
@@ -12,19 +22,15 @@ public:
 
 	bool Init();
 	void Destroy();
-
-	void Update(float delta);
-	void Render();
     
-    void ReplaceScene(std::unique_ptr<Scene> scene);
+    void PushScene(ApplicationScenes scene, PushSceneMethod method = psmSuspend);
 
 private:
 	Application(const Application&) = delete;
 	Application& operator= (const Application&) = delete;
     
 private:
-    std::unique_ptr<Scene> dyingScene_;
-    std::unique_ptr<Scene> currentScene_;
+    std::unique_ptr<Scene> sceneStorage_[asNumScenes];
 };
 
 #endif

@@ -3,7 +3,7 @@
 #include "../Camera/Camera.h"
 #include <iostream>
 
-void GhostBartScene::SceneEnter()
+void GhostBartScene::OnEnter()
 {
     std::cout << "**** ENTERING GHOST BART SCENE ****" << std::endl;
     
@@ -14,11 +14,21 @@ void GhostBartScene::SceneEnter()
     CameraCaptureStart(nullptr);
 }
 
-void GhostBartScene::SceneExit()
+void GhostBartScene::OnExit()
 {
     std::cout << "**** EXITING GHOST BART SCENE ****" << std::endl;
     
     CameraCaptureStop();
+}
+
+void GhostBartScene::OnSuspend()
+{
+    std::cout << "**** SUSPENDING BART SCENE ****" << std::endl;
+}
+
+void GhostBartScene::OnResume()
+{
+    std::cout << "**** RESUME BART SCENE ****" << std::endl;
 }
 
 void GhostBartScene::Update(float delta)
