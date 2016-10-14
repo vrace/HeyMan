@@ -15,6 +15,8 @@ public:
     virtual void OnSuspend() override;
     virtual void OnResume() override;
     
+    virtual void OnTouch(int x, int y) override;
+    
     virtual void Update(float delta) override;
     virtual void Render() override;
     

@@ -37,4 +37,11 @@
     OpenGLESGraphics::EndRender();
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint touchLocation = [touch locationInView:self.view];
+    theApp->Touch((int)touchLocation.x, (int)touchLocation.y);
+}
+
 @end

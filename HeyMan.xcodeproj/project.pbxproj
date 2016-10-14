@@ -15,6 +15,7 @@
 		1144BF4C1DA898E800876030 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144BF4B1DA898E800876030 /* OpenGLES.framework */; };
 		1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */; };
 		1158DAF41DB07BC0007D7308 /* SceneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF21DB07BC0007D7308 /* SceneStack.cpp */; };
+		1158DAF71DB0B4BE007D7308 /* WelcomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF51DB0B4BE007D7308 /* WelcomeScene.cpp */; };
 		11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D11DA8E56600F49222 /* Vertex.cpp */; };
 		11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D41DA9CD2700F49222 /* Texture.cpp */; };
 		11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */; };
@@ -46,6 +47,11 @@
 		1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLESGraphics.mm; sourceTree = "<group>"; };
 		1158DAF21DB07BC0007D7308 /* SceneStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStack.cpp; sourceTree = "<group>"; };
 		1158DAF31DB07BC0007D7308 /* SceneStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneStack.h; sourceTree = "<group>"; };
+		1158DAF51DB0B4BE007D7308 /* WelcomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WelcomeScene.cpp; sourceTree = "<group>"; };
+		1158DAF61DB0B4BE007D7308 /* WelcomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScene.h; sourceTree = "<group>"; };
+		1158DB001DB0BC85007D7308 /* Vector2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
+		1158DB011DB0BD11007D7308 /* Vector3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
+		1158DB021DB0BD8E007D7308 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		11B0D8D11DA8E56600F49222 /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		11B0D8D21DA8E56600F49222 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		11B0D8D41DA9CD2700F49222 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
@@ -107,6 +113,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1158DAFF1DB0BC48007D7308 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1158DB001DB0BC85007D7308 /* Vector2.h */,
+				1158DB011DB0BD11007D7308 /* Vector3.h */,
+				1158DB021DB0BD8E007D7308 /* Types.h */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		11B0D8DA1DA9E1E700F49222 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +149,8 @@
 				1158DAF31DB07BC0007D7308 /* SceneStack.h */,
 				11B0D8ED1DAA2E7C00F49222 /* GhostBartScene.cpp */,
 				11B0D8EE1DAA2E7C00F49222 /* GhostBartScene.h */,
+				1158DAF51DB0B4BE007D7308 /* WelcomeScene.cpp */,
+				1158DAF61DB0B4BE007D7308 /* WelcomeScene.h */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -157,6 +175,7 @@
 		11FE74201DA8899300AA342C /* HeyMan */ = {
 			isa = PBXGroup;
 			children = (
+				1158DAFF1DB0BC48007D7308 /* Types */,
 				11B0D8E91DAA2CFE00F49222 /* Scene */,
 				11B0D8DD1DAA21A800F49222 /* Camera */,
 				11B0D8DA1DA9E1E700F49222 /* Resources */,
@@ -302,6 +321,7 @@
 				11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */,
 				11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */,
 				11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */,
+				1158DAF71DB0B4BE007D7308 /* WelcomeScene.cpp in Sources */,
 				1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */,
 				11B0D8EF1DAA2E7C00F49222 /* GhostBartScene.cpp in Sources */,
 				1144BF4A1DA8955500876030 /* RenderLayerViewController.mm in Sources */,

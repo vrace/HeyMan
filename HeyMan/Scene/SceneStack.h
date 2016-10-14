@@ -35,6 +35,7 @@ public:
     bool PushScene(Scene* scene, PushSceneMethod method = psmSuspend);
     void PopScene();
     
+    void Touch(int x, int y);
     void Update(float delta);
     void Render();
     
