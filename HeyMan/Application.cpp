@@ -4,6 +4,8 @@
 #include "Scene/GhostBartScene.h"
 #include "Scene/WelcomeScene.h"
 
+std::unique_ptr<Application> theApp;
+
 bool Application::Init()
 {
 	std::cout << "**** APPLICATION INIT ****" << std::endl;

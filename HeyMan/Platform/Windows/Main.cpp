@@ -11,7 +11,6 @@
 #include "InitGdiplus.h"
 
 static const TCHAR APPLICATION_NAME[] = TEXT("HeyMan");
-std::unique_ptr<Application> theApp;
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam);
 
@@ -54,6 +53,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	theApp = std::make_unique<Application>();
 	theApp->Init();
+	theApp->SetScreenSize(rc.right - rc.left, rc.bottom - rc.top);
 
 	LARGE_INTEGER freq;
 	LARGE_INTEGER counter;
@@ -113,6 +113,8 @@ LRESULT WINAPI WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	case WM_SIZE:
 		GetClientRect(hwnd, &rc);
 		OpenGLGraphics::ResizeViewport(rc);
+		if (theApp)
+			theApp->SetScreenSize(rc.right - rc.left, rc.bottom - rc.top);
 		return 0;
 
 	default:

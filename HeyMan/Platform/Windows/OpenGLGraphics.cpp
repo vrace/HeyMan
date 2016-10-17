@@ -15,17 +15,15 @@ void OpenGLGraphics::Clear()
 
 void OpenGLGraphics::SetTexture(const Texture *texture)
 {
-	auto *previous = texture_;
-	texture_ = dynamic_cast<const OpenGLTexture*>(texture);
-
-	if (previous != texture_)
+	if (texture_ != texture)
+	{
 		Commit();
+		texture_ = dynamic_cast<const OpenGLTexture*>(texture);
+	}
 }
 
 void OpenGLGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &c)
 {
-	// TODO: commit if texture changes
-
 	vertices_.push_back(a);
 	vertices_.push_back(b);
 	vertices_.push_back(c);
@@ -93,8 +91,6 @@ void OpenGLGraphics::Init(HDC hdc, RECT &rc)
 	Resize(rc);
 
 	glShadeModel(GL_SMOOTH);
-	
-	glEnable(GL_DEPTH_TEST);
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
