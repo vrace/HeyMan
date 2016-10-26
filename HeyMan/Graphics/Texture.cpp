@@ -3,10 +3,15 @@
 
 void Texture::Draw(Graphics &g, const vec2 &origin, const vec2 &size)
 {
-    Vertex topLeft = Vertex(origin.x, origin.y, 0, 0, 0);
-    Vertex topRight = Vertex(origin.x + size.x, origin.y, 0, 1, 0);
-    Vertex bottomLeft = Vertex(origin.x, origin.y + size.y, 0, 0, 1);
-    Vertex bottomRight = Vertex(origin.x + size.x, origin.y + size.y, 0, 1, 1);
+	float left = (float)origin.x;
+	float right = (float)(origin.x + size.x);
+	float top = (float)origin.y;
+	float bottom = (float)(origin.y + size.y);
+
+    Vertex topLeft = Vertex(vec3f(left, top), UV(0, 0));
+    Vertex topRight = Vertex(vec3f(right, top), UV(1, 0));
+    Vertex bottomLeft = Vertex(vec3f(left, bottom), UV(0, 1));
+    Vertex bottomRight = Vertex(vec3f(right, bottom), UV(1, 1));
     
     g.SetTexture(this);
     g.Triangle(topLeft, bottomLeft, bottomRight);

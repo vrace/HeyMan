@@ -16,6 +16,9 @@
     <Filter Include="Scene">
       <UniqueIdentifier>{eec882c3-5f14-46c6-b1ed-4628612e0d67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Types">
+      <UniqueIdentifier>{d8fe7656-e10e-460b-94c3-17042e2322f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Platform\Windows\Main.cpp">
@@ -52,6 +55,12 @@
     <ClCompile Include="Platform\Windows\InitGdiplus.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="Scene\SceneStack.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\WelcomeScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
@@ -87,6 +96,27 @@
     </ClInclude>
     <ClInclude Include="Platform\Windows\InitGdiplus.h">
       <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneStack.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\WelcomeScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Types\Types.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Types\Vector2.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Types\Vector3.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Types\Color.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Types\UV.h">
+      <Filter>Types</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

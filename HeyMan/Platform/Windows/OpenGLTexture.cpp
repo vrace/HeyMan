@@ -19,8 +19,15 @@ std::unique_ptr<Texture> LoadTexture(const std::string &name)
 
 		Gdiplus::Rect rc(0, 0, bitmap->GetWidth(), bitmap->GetHeight());
 		Gdiplus::BitmapData data;
-		if (bitmap->LockBits(&rc, Gdiplus::ImageLockModeRead, PixelFormat24bppRGB, &data) == Gdiplus::Ok)
+		if (bitmap->LockBits(&rc, Gdiplus::ImageLockModeRead | Gdiplus::ImageLockModeWrite, PixelFormat24bppRGB, &data) == Gdiplus::Ok)
 		{
+			for (int row = 0; row < (int)data.Height; row++)
+			{
+				unsigned char *p = ((unsigned char*)data.Scan0) + data.Stride * row;
+				for (int index = 0; index < (int)data.Width; index++)
+					std::swap(p[index * 3], p[index * 3 + 2]);
+			}
+
 			GLuint id;
 			glGenTextures(1, &id);
 			glBindTexture(GL_TEXTURE_2D, id);
