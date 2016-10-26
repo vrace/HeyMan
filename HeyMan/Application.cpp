@@ -3,15 +3,17 @@
 #include "Graphics/Graphics.h"
 #include "Scene/GhostBartScene.h"
 #include "Scene/WelcomeScene.h"
+#include "Scene/ScanScene.h"
 
 bool Application::Init()
 {
 	std::cout << "**** APPLICATION INIT ****" << std::endl;
     
     sceneStorage_[asWelcome] = std::unique_ptr<Scene>(new WelcomeScene());
+    sceneStorage_[asScan] = std::unique_ptr<Scene>(new ScanScene());
     sceneStorage_[asBart] = std::unique_ptr<Scene>(new GhostBartScene());
     
-    PushScene(asWelcome);
+    PushScene(asScan);
     
 	return true;
 }

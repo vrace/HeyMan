@@ -24,3 +24,13 @@ void Scene::OnTouch(int x, int y)
 {
     
 }
+
+void Scene::Update(float delta)
+{
+    
+}
+
+void Scene::Render()
+{
+    
+}

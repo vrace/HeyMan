@@ -56,7 +56,7 @@ void OpenGLESGraphics::Triangle(const Vertex &a, const Vertex &b, const Vertex &
 
 void OpenGLESGraphics::Commit()
 {
-    // TODO:
+    
 }
 
 void OpenGLESGraphics::Init(GLKView *view)
@@ -72,7 +72,6 @@ void OpenGLESGraphics::Init(GLKView *view)
     
     [EAGLContext setCurrentContext:context_];
     
-    glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);

@@ -17,6 +17,7 @@
 		1158DAF41DB07BC0007D7308 /* SceneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF21DB07BC0007D7308 /* SceneStack.cpp */; };
 		1158DAF71DB0B4BE007D7308 /* WelcomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1158DAF51DB0B4BE007D7308 /* WelcomeScene.cpp */; };
 		1158DB041DB0CC0A007D7308 /* panic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1158DB031DB0CC0A007D7308 /* panic.jpg */; };
+		119940DA1DBB35260084AF05 /* FaceDetection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 119940D81DBB35260084AF05 /* FaceDetection.cpp */; };
 		11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D11DA8E56600F49222 /* Vertex.cpp */; };
 		11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D41DA9CD2700F49222 /* Texture.cpp */; };
 		11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */; };
@@ -25,6 +26,11 @@
 		11B0D8E81DAA26E400F49222 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B0D8E71DAA26E400F49222 /* CoreVideo.framework */; };
 		11B0D8EC1DAA2DE200F49222 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8EA1DAA2DE200F49222 /* Scene.cpp */; };
 		11B0D8EF1DAA2E7C00F49222 /* GhostBartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D8ED1DAA2E7C00F49222 /* GhostBartScene.cpp */; };
+		11DB09F71DC09AFF00FA117D /* CoreImageFaceDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11DB09F51DC09AFF00FA117D /* CoreImageFaceDetection.mm */; };
+		11DB09F91DC09D4600FA117D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DB09F81DC09D4600FA117D /* CoreImage.framework */; };
+		11DB09FB1DC09F0600FA117D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DB09FA1DC09F0600FA117D /* Foundation.framework */; };
+		11DB09FD1DC0AB1700FA117D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DB09FC1DC0AB1700FA117D /* ImageIO.framework */; };
+		11FDF0411DC0AEF90028697F /* ScanScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03F1DC0AEF90028697F /* ScanScene.cpp */; };
 		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
 		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
 		11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.mm */; };
@@ -54,6 +60,9 @@
 		1158DB011DB0BD11007D7308 /* Vector3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
 		1158DB021DB0BD8E007D7308 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		1158DB031DB0CC0A007D7308 /* panic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panic.jpg; sourceTree = "<group>"; };
+		117F9FC71DBE08BD00AE7191 /* Subscribable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Subscribable.h; sourceTree = "<group>"; };
+		119940D81DBB35260084AF05 /* FaceDetection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetection.cpp; sourceTree = "<group>"; };
+		119940D91DBB35260084AF05 /* FaceDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
 		11B0D8D11DA8E56600F49222 /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		11B0D8D21DA8E56600F49222 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		11B0D8D41DA9CD2700F49222 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
@@ -68,6 +77,13 @@
 		11B0D8EB1DAA2DE200F49222 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		11B0D8ED1DAA2E7C00F49222 /* GhostBartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GhostBartScene.cpp; sourceTree = "<group>"; };
 		11B0D8EE1DAA2E7C00F49222 /* GhostBartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhostBartScene.h; sourceTree = "<group>"; };
+		11DB09F51DC09AFF00FA117D /* CoreImageFaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CoreImageFaceDetection.mm; sourceTree = "<group>"; };
+		11DB09F61DC09AFF00FA117D /* CoreImageFaceDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreImageFaceDetection.h; sourceTree = "<group>"; };
+		11DB09F81DC09D4600FA117D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		11DB09FA1DC09F0600FA117D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		11DB09FC1DC0AB1700FA117D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		11FDF03F1DC0AEF90028697F /* ScanScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScanScene.cpp; sourceTree = "<group>"; };
+		11FDF0401DC0AEF90028697F /* ScanScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanScene.h; sourceTree = "<group>"; };
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -90,6 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DB09FD1DC0AB1700FA117D /* ImageIO.framework in Frameworks */,
+				11DB09FB1DC09F0600FA117D /* Foundation.framework in Frameworks */,
+				11DB09F91DC09D4600FA117D /* CoreImage.framework in Frameworks */,
 				11B0D8E81DAA26E400F49222 /* CoreVideo.framework in Frameworks */,
 				1144BF4C1DA898E800876030 /* OpenGLES.framework in Frameworks */,
 				1144BF471DA894C700876030 /* UIKit.framework in Frameworks */,
@@ -105,6 +124,9 @@
 		1144BF3F1DA890F800876030 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11DB09FC1DC0AB1700FA117D /* ImageIO.framework */,
+				11DB09FA1DC09F0600FA117D /* Foundation.framework */,
+				11DB09F81DC09D4600FA117D /* CoreImage.framework */,
 				11B0D8E71DAA26E400F49222 /* CoreVideo.framework */,
 				1144BF4B1DA898E800876030 /* OpenGLES.framework */,
 				1144BF461DA894C700876030 /* UIKit.framework */,
@@ -121,8 +143,18 @@
 				1158DB001DB0BC85007D7308 /* Vector2.h */,
 				1158DB011DB0BD11007D7308 /* Vector3.h */,
 				1158DB021DB0BD8E007D7308 /* Types.h */,
+				117F9FC71DBE08BD00AE7191 /* Subscribable.h */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		119940D71DBB34EE0084AF05 /* FaceDetection */ = {
+			isa = PBXGroup;
+			children = (
+				119940D81DBB35260084AF05 /* FaceDetection.cpp */,
+				119940D91DBB35260084AF05 /* FaceDetection.h */,
+			);
+			path = FaceDetection;
 			sourceTree = "<group>";
 		};
 		11B0D8DA1DA9E1E700F49222 /* Resources */ = {
@@ -154,6 +186,8 @@
 				11B0D8EE1DAA2E7C00F49222 /* GhostBartScene.h */,
 				1158DAF51DB0B4BE007D7308 /* WelcomeScene.cpp */,
 				1158DAF61DB0B4BE007D7308 /* WelcomeScene.h */,
+				11FDF03F1DC0AEF90028697F /* ScanScene.cpp */,
+				11FDF0401DC0AEF90028697F /* ScanScene.h */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -178,6 +212,7 @@
 		11FE74201DA8899300AA342C /* HeyMan */ = {
 			isa = PBXGroup;
 			children = (
+				119940D71DBB34EE0084AF05 /* FaceDetection */,
 				1158DAFF1DB0BC48007D7308 /* Types */,
 				11B0D8E91DAA2CFE00F49222 /* Scene */,
 				11B0D8DD1DAA21A800F49222 /* Camera */,
@@ -216,6 +251,8 @@
 				1144BF4E1DA8C56500876030 /* OpenGLESGraphics.mm */,
 				11B0D8D71DA9D61400F49222 /* OpenGLESTexture.mm */,
 				11B0D8D81DA9D61400F49222 /* OpenGLESTexture.h */,
+				11DB09F51DC09AFF00FA117D /* CoreImageFaceDetection.mm */,
+				11DB09F61DC09AFF00FA117D /* CoreImageFaceDetection.h */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -323,10 +360,13 @@
 				11B0D8E31DAA237000F49222 /* Camera.cpp in Sources */,
 				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
 				11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */,
+				11DB09F71DC09AFF00FA117D /* CoreImageFaceDetection.mm in Sources */,
 				11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */,
 				11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */,
+				119940DA1DBB35260084AF05 /* FaceDetection.cpp in Sources */,
 				1158DAF71DB0B4BE007D7308 /* WelcomeScene.cpp in Sources */,
 				1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */,
+				11FDF0411DC0AEF90028697F /* ScanScene.cpp in Sources */,
 				11B0D8EF1DAA2E7C00F49222 /* GhostBartScene.cpp in Sources */,
 				1144BF4A1DA8955500876030 /* RenderLayerViewController.mm in Sources */,
 				11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */,

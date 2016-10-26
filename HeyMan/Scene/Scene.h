@@ -16,8 +16,8 @@ public:
     
     virtual void OnTouch(int x, int y);
     
-    virtual void Update(float delta) = 0;
-    virtual void Render() = 0;
+    virtual void Update(float delta);
+    virtual void Render();
 };
 
 #endif
