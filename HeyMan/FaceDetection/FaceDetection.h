@@ -6,13 +6,29 @@
 #include <functional>
 #include <memory>
 
+struct DetectedFaceInfo
+{
+    int imageBufferWidth;
+    int imageBufferHeight;
+    int faceOriginX;
+    int faceOriginY;
+    int faceWidth;
+    int faceHeight;
+};
+
+class FaceDetectionDelegate
+{
+public:
+    virtual void FaceDetectionBegin() = 0;
+    virtual void FaceDetectionEnd() = 0;
+    virtual void FaceDetectionInfo(const DetectedFaceInfo &info) = 0;
+};
+
 class FaceDetection
-: public Subscribable<std::function<void (void)>>
+: public Subscribable<FaceDetectionDelegate*>
 , public CameraFeedHandler
 {
 public:
-    using Subscribable = Subscribable<std::function<void (void)>>;
-    
     FaceDetection() = default;
     virtual ~FaceDetection() = default;
 };

@@ -2,6 +2,7 @@
 #define HEYMAN_SUBSCRIBABLE_H
 
 #include <vector>
+#include <algorithm>
 #include <functional>
 
 template <class SUBSCRIBER>
@@ -15,13 +16,14 @@ public:
     
     void Subscribe(SUBSCRIBER s)
     {
-        if (subscribers_.find(subscribers_.begin(), subscribers_.end(), s) == subscribers_.end())
+        auto it = std::find(std::begin(subscribers_), std::end(subscribers_), s);
+        if (it == subscribers_.end())
             subscribers_.push_back(s);
     }
     
     void Unsubscribe(SUBSCRIBER s)
     {
-        auto it = subscribers_.find(subscribers_.begin(), subscribers_.end(), s);
+        auto it = std::find(std::begin(subscribers_), std::end(subscribers_), s);
         if (it != subscribers_.end())
             subscribers_.erase(it);
     }

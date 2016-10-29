@@ -9,7 +9,10 @@ class CoreImageFaceDetection : public FaceDetection
 public:
     CoreImageFaceDetection(CIDetector *detector);
     
-    virtual void CameraFeed(void *buffer, int bytesPerRow, int width, int height) override;
+    virtual void CameraFeed(void *) override;
+    
+private:
+    DetectedFaceInfo Transform(const DetectedFaceInfo &info);
     
 private:
     CIDetector *detector_;

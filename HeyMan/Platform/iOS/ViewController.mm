@@ -9,6 +9,11 @@
 
 #include "../../Camera/Camera.h"
 
+struct CameraOutputBox
+{
+    CIImage *image;
+};
+
 namespace
 {
     ViewController *_mainVC = nullptr;
@@ -110,6 +115,7 @@ namespace
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
+    /*
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CVPixelBufferLockBaseAddress(imageBuffer, 0);
     
@@ -123,6 +129,11 @@ namespace
         cameraFeedHandler_->CameraFeed(baseAddress, (int)bytesPerRow, (int)width, (int)height);
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    */
+    
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    if (cameraFeedHandler_)
+        cameraFeedHandler_->CameraFeed(imageBuffer);
 }
 
 bool CameraCaptureStart(CameraFeedHandler *cameraFeedHandler)

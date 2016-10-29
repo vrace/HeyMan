@@ -16,6 +16,7 @@ public:
     
     void Draw(class Graphics &g, const vec2 &origin);
     void Draw(class Graphics &g, const vec2 &origin, const vec2 &size);
+    void Draw(class Graphics &g, const Color &taint, const vec2 &origin, const vec2 &size);
 };
 
 extern std::unique_ptr<Texture> LoadTexture(const std::string &name);
