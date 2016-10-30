@@ -31,6 +31,7 @@
 		11DB09FB1DC09F0600FA117D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DB09FA1DC09F0600FA117D /* Foundation.framework */; };
 		11DB09FD1DC0AB1700FA117D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DB09FC1DC0AB1700FA117D /* ImageIO.framework */; };
 		11FDF0411DC0AEF90028697F /* ScanScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03F1DC0AEF90028697F /* ScanScene.cpp */; };
+		11FDF0441DC5E6410028697F /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 11FDF0431DC5E6410028697F /* name.png */; };
 		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
 		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
 		11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.mm */; };
@@ -84,6 +85,7 @@
 		11DB09FC1DC0AB1700FA117D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		11FDF03F1DC0AEF90028697F /* ScanScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScanScene.cpp; sourceTree = "<group>"; };
 		11FDF0401DC0AEF90028697F /* ScanScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanScene.h; sourceTree = "<group>"; };
+		11FDF0431DC5E6410028697F /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		11B0D8DA1DA9E1E700F49222 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11FDF0431DC5E6410028697F /* name.png */,
 				1158DB031DB0CC0A007D7308 /* panic.jpg */,
 				11B0D8DB1DA9E22600F49222 /* bart.jpg */,
 			);
@@ -339,6 +342,7 @@
 			files = (
 				11FE746B1DA88E3600AA342C /* Main.storyboard in Resources */,
 				1158DB041DB0CC0A007D7308 /* panic.jpg in Resources */,
+				11FDF0441DC5E6410028697F /* name.png in Resources */,
 				11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */,
 				11B0D8DC1DA9E22600F49222 /* bart.jpg in Resources */,
 				11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */,

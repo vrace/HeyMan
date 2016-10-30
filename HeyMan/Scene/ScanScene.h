@@ -22,6 +22,7 @@ public:
 private:
     std::unique_ptr<FaceDetection> faceDetection_;
     std::unique_ptr<Texture> bart_;
+    std::unique_ptr<Texture> name_;
     std::vector<DetectedFaceInfo> faces_;
 };
 

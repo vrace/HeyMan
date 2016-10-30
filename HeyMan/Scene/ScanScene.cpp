@@ -7,6 +7,7 @@
 void ScanScene::OnEnter()
 {
     bart_ = LoadTexture("bart.jpg");
+    name_ = LoadTexture("name.png");
     
     faceDetection_ = InitFaceDetection();
     CameraCaptureStart(&*faceDetection_);
@@ -22,11 +23,13 @@ void ScanScene::OnExit()
 
 void ScanScene::Render()
 {
+    auto faces = faces_;
+    
     Graphics &g = *theGraphics;
     
     vec2 screen = theApp->ScreenSize();
     
-    for (const auto &face : faces_)
+    for (const auto &face : faces)
     {
         float xs = (float)screen.x / face.imageBufferWidth;
         float ys = (float)screen.y / face.imageBufferHeight;
@@ -34,6 +37,11 @@ void ScanScene::Render()
         bart_->Draw(g,
                     vec2(face.faceOriginX * xs, face.faceOriginY * ys),
                     vec2(face.faceWidth * xs, face.faceHeight * ys));
+        
+        int x = face.faceOriginX * xs + (face.faceWidth * xs - name_->Width()) / 2;
+        int y = face.faceOriginY * xs - name_->Height();
+        
+        name_->Draw(g, vec2(x, y));
     }
 }
 
