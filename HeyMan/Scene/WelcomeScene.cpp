@@ -1,27 +1,17 @@
 #include "WelcomeScene.h"
 #include "../Graphics/Graphics.h"
 #include "../Application.h"
+#include <assert.h>
 
 void WelcomeScene::OnEnter()
 {
-    bart_ = LoadTexture("bart.jpg");
-    panic_ = LoadTexture("panic.jpg");
+    LoadFromFile("Welcome.ui");
 }
 
-void WelcomeScene::OnTouch(int x, int y)
+void WelcomeScene::OnTouchElement(SceneElement &element)
 {
-    
-}
-
-void WelcomeScene::Update(float delta)
-{
-    
-}
-
-void WelcomeScene::Render()
-{
-    Graphics &g = *theGraphics;
-    
-    bart_->Draw(g, vec2(0, 0), theApp->ScreenSize());
-    panic_->Draw(g, vec2(50, 50));
+    if (element.ID() == "panic")
+    {
+        theApp->PushScene(asScan);
+    }
 }

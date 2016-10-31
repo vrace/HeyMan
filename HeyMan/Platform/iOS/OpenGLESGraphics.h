@@ -13,6 +13,8 @@ public:
     virtual void Triangle(const Vertex &a, const Vertex &b, const Vertex &c) override;
     virtual void Commit() override;
     
+    virtual void DrawBlock(std::function<void (Graphics &g)> drawFunc) override;
+    
     static void InitGraphics(GLKView *view);
     static void BeginRender(CGRect *rect);
     static void EndRender();

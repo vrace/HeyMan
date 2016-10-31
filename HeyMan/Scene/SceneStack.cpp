@@ -67,10 +67,22 @@ void SceneStack::WalkStack(std::function<void (const SceneStackItem &)> func) co
         func(*it);
 }
 
-void SceneStack::Touch(int x, int y)
+void SceneStack::TouchBegin(const vec2 &pt)
 {
     if (current_)
-        current_->OnTouch(x, y);
+        current_->OnTouchBegin(pt);
+}
+
+void SceneStack::TouchMove(const vec2 &pt)
+{
+    if (current_)
+        current_->OnTouchMove(pt);
+}
+
+void SceneStack::TouchEnd(const vec2 &pt)
+{
+    if (current_)
+        current_->OnTouchEnd(pt);
 }
 
 void SceneStack::Update(float delta)

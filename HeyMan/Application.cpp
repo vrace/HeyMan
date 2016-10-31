@@ -15,7 +15,7 @@ bool Application::Init()
     sceneStorage_[asScan] = std::unique_ptr<Scene>(new ScanScene());
     sceneStorage_[asBart] = std::unique_ptr<Scene>(new GhostBartScene());
     
-    PushScene(asScan);
+    PushScene(asWelcome);
     
 	return true;
 }

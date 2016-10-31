@@ -59,6 +59,23 @@ void OpenGLESGraphics::Commit()
     
 }
 
+void OpenGLESGraphics::DrawBlock(std::function<void (Graphics &)> drawFunc)
+{
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    
+    drawFunc(*this);
+    
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+    
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+}
+
 void OpenGLESGraphics::Init(GLKView *view)
 {
     context_ = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];

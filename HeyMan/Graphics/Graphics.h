@@ -2,6 +2,7 @@
 #define HEYMAN_GRAPHICS_H
 
 #include <memory>
+#include <functional>
 #include "Vertex.h"
 #include "Texture.h"
 
@@ -15,6 +16,8 @@ public:
     virtual void SetTexture(const Texture *texture) = 0;
 	virtual void Triangle(const Vertex &a, const Vertex &b, const Vertex &c) = 0;
 	virtual void Commit() = 0;
+    
+    virtual void DrawBlock(std::function<void (Graphics &g)> drawFunc) = 0;
 
 private:
 	Graphics(const Graphics&) = delete;

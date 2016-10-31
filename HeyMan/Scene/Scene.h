@@ -14,7 +14,9 @@ public:
     virtual void OnSuspend();
     virtual void OnResume();
     
-    virtual void OnTouch(int x, int y);
+    virtual void OnTouchBegin(const vec2 &pt);
+    virtual void OnTouchMove(const vec2 &pt);
+    virtual void OnTouchEnd(const vec2 &pt);
     
     virtual void Update(float delta);
     virtual void Render();

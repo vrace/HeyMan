@@ -35,7 +35,10 @@ public:
     bool PushScene(Scene* scene, PushSceneMethod method = psmSuspend);
     void PopScene();
     
-    void Touch(int x, int y);
+    void TouchBegin(const vec2 &pt);
+    void TouchMove(const vec2 &pt);
+    void TouchEnd(const vec2 &pt);
+    
     void Update(float delta);
     void Render();
     

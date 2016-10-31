@@ -20,7 +20,17 @@ void Scene::OnResume()
     
 }
 
-void Scene::OnTouch(int x, int y)
+void Scene::OnTouchBegin(const vec2 &pt)
+{
+    
+}
+
+void Scene::OnTouchMove(const vec2 &pt)
+{
+    
+}
+
+void Scene::OnTouchEnd(const vec2 &pt)
 {
     
 }

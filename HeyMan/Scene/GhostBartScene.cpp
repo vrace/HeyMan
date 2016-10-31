@@ -31,11 +31,6 @@ void GhostBartScene::OnResume()
     std::cout << "**** RESUME BART SCENE ****" << std::endl;
 }
 
-void GhostBartScene::OnTouch(int x, int y)
-{
-    std::cout << "Doh (" << x << ", " << y << ")" << std::endl;
-}
-
 void GhostBartScene::Update(float delta)
 {
     

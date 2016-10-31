@@ -32,6 +32,13 @@
 		11DB09FD1DC0AB1700FA117D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DB09FC1DC0AB1700FA117D /* ImageIO.framework */; };
 		11FDF0411DC0AEF90028697F /* ScanScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF03F1DC0AEF90028697F /* ScanScene.cpp */; };
 		11FDF0441DC5E6410028697F /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 11FDF0431DC5E6410028697F /* name.png */; };
+		11FDF0461DC62B240028697F /* Welcome.ui in Resources */ = {isa = PBXBuildFile; fileRef = 11FDF0451DC62B240028697F /* Welcome.ui */; };
+		11FDF04A1DC62BCC0028697F /* SceneElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF0481DC62BCC0028697F /* SceneElement.cpp */; };
+		11FDF04D1DC62D5E0028697F /* SceneImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF04B1DC62D5E0028697F /* SceneImage.cpp */; };
+		11FDF0501DC6319E0028697F /* StringToken.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF04E1DC6319E0028697F /* StringToken.cpp */; };
+		11FDF0531DC6EE9F0028697F /* SceneCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF0511DC6EE9F0028697F /* SceneCanvas.cpp */; };
+		11FDF0561DC718490028697F /* ElementUIScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF0541DC718490028697F /* ElementUIScene.cpp */; };
+		11FDF0591DC71BE60028697F /* BundleResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FDF0581DC71BE60028697F /* BundleResourcePath.mm */; };
 		11FE74551DA88D9C00AA342C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74531DA88D9C00AA342C /* Application.cpp */; };
 		11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11FE74571DA88DAF00AA342C /* Graphics.cpp */; };
 		11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11FE745B1DA88E3600AA342C /* AppDelegate.mm */; };
@@ -86,6 +93,20 @@
 		11FDF03F1DC0AEF90028697F /* ScanScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScanScene.cpp; sourceTree = "<group>"; };
 		11FDF0401DC0AEF90028697F /* ScanScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanScene.h; sourceTree = "<group>"; };
 		11FDF0431DC5E6410028697F /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
+		11FDF0451DC62B240028697F /* Welcome.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Welcome.ui; sourceTree = "<group>"; };
+		11FDF0481DC62BCC0028697F /* SceneElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneElement.cpp; sourceTree = "<group>"; };
+		11FDF0491DC62BCC0028697F /* SceneElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneElement.h; sourceTree = "<group>"; };
+		11FDF04B1DC62D5E0028697F /* SceneImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneImage.cpp; sourceTree = "<group>"; };
+		11FDF04C1DC62D5E0028697F /* SceneImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneImage.h; sourceTree = "<group>"; };
+		11FDF04E1DC6319E0028697F /* StringToken.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringToken.cpp; sourceTree = "<group>"; };
+		11FDF04F1DC6319E0028697F /* StringToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringToken.h; sourceTree = "<group>"; };
+		11FDF0511DC6EE9F0028697F /* SceneCanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneCanvas.cpp; sourceTree = "<group>"; };
+		11FDF0521DC6EE9F0028697F /* SceneCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCanvas.h; sourceTree = "<group>"; };
+		11FDF0541DC718490028697F /* ElementUIScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ElementUIScene.cpp; sourceTree = "<group>"; };
+		11FDF0551DC718490028697F /* ElementUIScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementUIScene.h; sourceTree = "<group>"; };
+		11FDF0571DC71B7F0028697F /* ResourcePath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourcePath.h; sourceTree = "<group>"; };
+		11FDF0581DC71BE60028697F /* BundleResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BundleResourcePath.mm; sourceTree = "<group>"; };
+		11FDF05A1DC726D90028697F /* SceneElementTexturable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneElementTexturable.h; sourceTree = "<group>"; };
 		11FE741E1DA8899300AA342C /* HeyMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE74531DA88D9C00AA342C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		11FE74541DA88D9C00AA342C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -146,6 +167,9 @@
 				1158DB011DB0BD11007D7308 /* Vector3.h */,
 				1158DB021DB0BD8E007D7308 /* Types.h */,
 				117F9FC71DBE08BD00AE7191 /* Subscribable.h */,
+				11FDF04E1DC6319E0028697F /* StringToken.cpp */,
+				11FDF04F1DC6319E0028697F /* StringToken.h */,
+				11FDF0571DC71B7F0028697F /* ResourcePath.h */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -162,6 +186,7 @@
 		11B0D8DA1DA9E1E700F49222 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11FDF0451DC62B240028697F /* Welcome.ui */,
 				11FDF0431DC5E6410028697F /* name.png */,
 				1158DB031DB0CC0A007D7308 /* panic.jpg */,
 				11B0D8DB1DA9E22600F49222 /* bart.jpg */,
@@ -181,8 +206,11 @@
 		11B0D8E91DAA2CFE00F49222 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				11FDF0471DC62B630028697F /* UI */,
 				11B0D8EA1DAA2DE200F49222 /* Scene.cpp */,
 				11B0D8EB1DAA2DE200F49222 /* Scene.h */,
+				11FDF0541DC718490028697F /* ElementUIScene.cpp */,
+				11FDF0551DC718490028697F /* ElementUIScene.h */,
 				1158DAF21DB07BC0007D7308 /* SceneStack.cpp */,
 				1158DAF31DB07BC0007D7308 /* SceneStack.h */,
 				11B0D8ED1DAA2E7C00F49222 /* GhostBartScene.cpp */,
@@ -193,6 +221,20 @@
 				11FDF0401DC0AEF90028697F /* ScanScene.h */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		11FDF0471DC62B630028697F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				11FDF0481DC62BCC0028697F /* SceneElement.cpp */,
+				11FDF0491DC62BCC0028697F /* SceneElement.h */,
+				11FDF0511DC6EE9F0028697F /* SceneCanvas.cpp */,
+				11FDF0521DC6EE9F0028697F /* SceneCanvas.h */,
+				11FDF04B1DC62D5E0028697F /* SceneImage.cpp */,
+				11FDF04C1DC62D5E0028697F /* SceneImage.h */,
+				11FDF05A1DC726D90028697F /* SceneElementTexturable.h */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		11FE74151DA8899300AA342C = {
@@ -256,6 +298,7 @@
 				11B0D8D81DA9D61400F49222 /* OpenGLESTexture.h */,
 				11DB09F51DC09AFF00FA117D /* CoreImageFaceDetection.mm */,
 				11DB09F61DC09AFF00FA117D /* CoreImageFaceDetection.h */,
+				11FDF0581DC71BE60028697F /* BundleResourcePath.mm */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -346,6 +389,7 @@
 				11FE74691DA88E3600AA342C /* Assets.xcassets in Resources */,
 				11B0D8DC1DA9E22600F49222 /* bart.jpg in Resources */,
 				11FE746A1DA88E3600AA342C /* LaunchScreen.storyboard in Resources */,
+				11FDF0461DC62B240028697F /* Welcome.ui in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,23 +401,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FE746F1DA88E3600AA342C /* ViewController.mm in Sources */,
+				11FDF0531DC6EE9F0028697F /* SceneCanvas.cpp in Sources */,
+				11FDF04A1DC62BCC0028697F /* SceneElement.cpp in Sources */,
 				11B0D8EC1DAA2DE200F49222 /* Scene.cpp in Sources */,
 				11FE746E1DA88E3600AA342C /* main.mm in Sources */,
 				11FE74551DA88D9C00AA342C /* Application.cpp in Sources */,
 				11B0D8D31DA8E56600F49222 /* Vertex.cpp in Sources */,
 				1158DAF41DB07BC0007D7308 /* SceneStack.cpp in Sources */,
 				11B0D8E31DAA237000F49222 /* Camera.cpp in Sources */,
+				11FDF0561DC718490028697F /* ElementUIScene.cpp in Sources */,
 				11FE746C1DA88E3600AA342C /* HeyMan.xcdatamodeld in Sources */,
 				11B0D8D61DA9CD2700F49222 /* Texture.cpp in Sources */,
+				11FDF0501DC6319E0028697F /* StringToken.cpp in Sources */,
 				11DB09F71DC09AFF00FA117D /* CoreImageFaceDetection.mm in Sources */,
 				11B0D8D91DA9D61400F49222 /* OpenGLESTexture.mm in Sources */,
 				11FE74591DA88DAF00AA342C /* Graphics.cpp in Sources */,
 				119940DA1DBB35260084AF05 /* FaceDetection.cpp in Sources */,
 				1158DAF71DB0B4BE007D7308 /* WelcomeScene.cpp in Sources */,
 				1144BF4F1DA8C56500876030 /* OpenGLESGraphics.mm in Sources */,
+				11FDF0591DC71BE60028697F /* BundleResourcePath.mm in Sources */,
 				11FDF0411DC0AEF90028697F /* ScanScene.cpp in Sources */,
 				11B0D8EF1DAA2E7C00F49222 /* GhostBartScene.cpp in Sources */,
 				1144BF4A1DA8955500876030 /* RenderLayerViewController.mm in Sources */,
+				11FDF04D1DC62D5E0028697F /* SceneImage.cpp in Sources */,
 				11FE74681DA88E3600AA342C /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
